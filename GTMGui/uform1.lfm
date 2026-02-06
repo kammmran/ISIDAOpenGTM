@@ -1,0 +1,14 @@
+object Form1: TForm1
+  Left = 635
+  Height = 600
+  Top = 161
+  Width = 600
+  Caption = 'Pilot Landscape'
+  Color = clWhite
+  OnClick = FormClick
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnMouseMove = FormMouseMove
+  OnPaint = FormPaint
+  LCLVersion = '1.6.4.0'
+end

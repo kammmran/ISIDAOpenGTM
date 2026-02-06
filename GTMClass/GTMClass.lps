@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="GTMClass.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="370"/>
+        <CursorPos X="28" Y="381"/>
+        <FoldState Value=" T0nL4sN"/>
+        <UsageCount Value="326"/>
+        <Bookmarks Count="1">
+          <Item0 X="60" Y="479" ID="5"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="gtmc_option.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="13"/>
+        <UsageCount Value="326"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../GTMapTool/ugtm_options.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="15" Y="10"/>
+        <UsageCount Value="326"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../GTMapTool/ugtmbase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="326"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../GTMapTool/ugtmxml.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="326"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../ISIDAKernel/dmath/units/ulinalg.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="326"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../ISIDAKernel/dmath/units/utypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="326"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../ISIDAKernel/isida_descriptor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="326"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../ModelAnalyzerR/unitclsstat.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitClsStat"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <UsageCount Value="326"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../ModelAnalyzerR/unitcvsvm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitCVsvm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="92"/>
+        <CursorPos X="59" Y="12"/>
+        <UsageCount Value="326"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uxgtmclass.pas"/>
+        <UnitName Value="uxGTMClass"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="303"/>
+        <CursorPos Y="318"/>
+        <UsageCount Value="15"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ugtmclass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMClass"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="322"/>
+        <CursorPos X="12" Y="340"/>
+        <UsageCount Value="199"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="gtmclassfunctions.pas"/>
+        <UnitName Value="GTMClassFunctions"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="165" Y="47"/>
+        <UsageCount Value="163"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../ModelAnalyzerC/unitclsstats.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitClsStats"/>
+        <EditorIndex Value="2"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="345" TopLine="272"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="343" TopLine="272"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="346" TopLine="272"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="347" TopLine="272"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="353" TopLine="275"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="354" TopLine="276"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="355" TopLine="277"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="356" TopLine="278"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="357" TopLine="279"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="358" TopLine="280"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="360" TopLine="336"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="361" TopLine="337"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="362" TopLine="338"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="363" TopLine="339"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="364" TopLine="340"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="367" TopLine="343"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="369" TopLine="345"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="370" TopLine="346"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="371" TopLine="347"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="372" TopLine="348"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="374" TopLine="350"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="375" TopLine="351"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="376" TopLine="352"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="377" TopLine="353"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="372" TopLine="353"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="374" TopLine="353"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="375" TopLine="353"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="376" TopLine="353"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="377" TopLine="353"/>
+      </Position>
+      <Position>
+        <Filename Value="GTMClass.lpr"/>
+        <Caret Line="372" TopLine="353"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default">
+        <Mode Name="default">
+          <local>
+            <CommandLineParams Value="-l cli.xml -m train_Freq_01_m100.xml -R test_Freq_01_m100R.svm -P test_BCF_C.prp -o cli"/>
+            <WorkingDirectory Value="/home/marcou/workdir/ISIDAGTM2024/GTMClass/example/BCF/CVIter1Fold2"/>
+          </local>
+        </Mode>
+      </Modes>
+    </RunParams>
+    <HistoryLists>
+      <List Name="WorkingDirectory" Type="File" Count="2">
+        <Item1 Value="/home/marcou/workdir/ISIDAGTM2024/GTMClass/example/BCF/CVIter1Fold2"/>
+      </List>
+      <List Name="LaunchingApplication" Type="File" Count="2">
+        <Item2 Value="/usr/bin/gnome-terminal -t &apos;Lazarus Run Output&apos; -e &apos;$(LazarusDir)/tools/runwait.sh $(TargetCmdLine)&apos;"/>
+      </List>
+      <List Name="CommandLineParameters" Count="3">
+        <Item1 Value="-l cli.xml -m train_Freq_01_m100.xml -R test_Freq_01_m100R.svm -P test_BCF_C.prp -o cli"/>
+        <Item2 Value="-m train_Freq_01_m100.xml -r train_Freq_01_m100R.svm -p train_BCF_C.prp -R test_Freq_01_m100R.svm -P test_BCF_C.prp -o cli"/>
+      </List>
+    </HistoryLists>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="GTMClass.lpr"/>
+        <Line Value="336"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

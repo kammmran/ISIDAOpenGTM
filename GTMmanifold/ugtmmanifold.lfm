@@ -1,0 +1,314 @@
+object FrmGTMmanifold: TFrmGTMmanifold
+  Left = 318
+  Height = 771
+  Top = 63
+  Width = 729
+  Caption = 'ISIDA/GTMManifoldView'
+  ClientHeight = 771
+  ClientWidth = 729
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  object GLSViewer: TGLSceneViewer
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = TrackBar1
+    Left = 0
+    Height = 640
+    Top = 0
+    Width = 729
+    Camera = GLCam
+    Buffer.AmbientColor.Red = 0.200000002980232
+    Buffer.AmbientColor.Green = 0.200000002980232
+    Buffer.AmbientColor.Blue = 0.200000002980232
+    Buffer.AmbientColor.Alpha = 1
+    FieldOfView = 162.238693237305
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    OnMouseDown = GLSViewerMouseDown
+    OnMouseMove = GLSViewerMouseMove
+    OnMouseUp = GLSViewerMouseUp
+    OnKeyDown = GLSViewerKeyDown
+    OnKeyUp = GLSViewerKeyUp
+    OnMouseWheelDown = GLSViewerMouseWheelDown
+    OnMouseWheelUp = GLSViewerMouseWheelUp
+    TabOrder = 0
+  end
+  object BtOK: TButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 664
+    Height = 33
+    Top = 733
+    Width = 60
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 5
+    Caption = 'OK'
+    OnClick = BtOKClick
+    TabOrder = 1
+  end
+  object BtQuit: TButton
+    AnchorSideRight.Control = BtOK
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Control = BtOK
+    Left = 664
+    Height = 33
+    Top = 695
+    Width = 60
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 5
+    Caption = 'Quit'
+    OnClick = BtQuitClick
+    TabOrder = 2
+  end
+  object EdDataPoints: TEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = BtDataPoints
+    AnchorSideBottom.Control = BtDataPoints
+    AnchorSideBottom.Side = asrCenter
+    Left = 5
+    Height = 28
+    Top = 679
+    Width = 572
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 3
+    Text = 'File of 3D PCA coordinates of instances (.mat)'
+  end
+  object EdWPhi: TEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = BtWPhi
+    AnchorSideBottom.Control = BtWPhi
+    AnchorSideBottom.Side = asrCenter
+    Left = 5
+    Height = 28
+    Top = 709
+    Width = 573
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 4
+    Text = 'File of 3D PCA coordinates of manifold (.mat)'
+  end
+  object EdXML: TEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = BtXML
+    AnchorSideBottom.Control = BtXML
+    AnchorSideBottom.Side = asrCenter
+    Left = 5
+    Height = 28
+    Top = 739
+    Width = 574
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 5
+    Text = 'GTM model file (.xml)'
+  end
+  object BtDataPoints: TButton
+    AnchorSideRight.Control = BtWPhi
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Control = BtWPhi
+    Left = 582
+    Height = 25
+    Top = 681
+    Width = 75
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 5
+    Caption = '...'
+    OnClick = BtDataPointsClick
+    TabOrder = 6
+  end
+  object BtWPhi: TButton
+    AnchorSideRight.Control = BtXML
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Control = BtXML
+    Left = 583
+    Height = 25
+    Top = 711
+    Width = 75
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 5
+    Caption = '...'
+    OnClick = BtWPhiClick
+    TabOrder = 7
+  end
+  object BtXML: TButton
+    AnchorSideRight.Control = BtOK
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 584
+    Height = 25
+    Top = 741
+    Width = 75
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 5
+    Caption = '...'
+    OnClick = BtXMLClick
+    TabOrder = 8
+  end
+  object TrackBar1: TTrackBar
+    Left = 0
+    Height = 31
+    Top = 640
+    Width = 200
+    OnChange = TrackBar1Change
+    Position = 0
+    TabOrder = 9
+  end
+  object Label1: TLabel
+    Left = 200
+    Height = 20
+    Top = 647
+    Width = 72
+    Anchors = [akLeft]
+    Caption = 'Nodes size'
+    ParentColor = False
+  end
+  object RadioBackground1: TRadioButton
+    Left = 296
+    Height = 24
+    Top = 647
+    Width = 142
+    Caption = 'Black background'
+    Checked = True
+    OnChange = RadioBackground1Change
+    TabOrder = 11
+    TabStop = True
+  end
+  object RadioBackground2: TRadioButton
+    Left = 448
+    Height = 24
+    Top = 647
+    Width = 146
+    Caption = 'White background'
+    OnChange = RadioBackground2Change
+    TabOrder = 10
+  end
+  object GLSmain: TGLScene
+    left = 696
+    top = 640
+    object GLDmy: TGLDummyCube
+      TagFloat = 0
+      PitchAngle = 0
+      RollAngle = 0
+      TurnAngle = 0
+      CubeSize = 1
+      EdgeColor.Red = 1
+      EdgeColor.Green = 1
+      EdgeColor.Blue = 1
+      EdgeColor.Alpha = 1
+      object GLLight: TGLLightSource
+        TagFloat = 0
+        Ambient.Red = 0
+        Ambient.Green = 0
+        Ambient.Blue = 0
+        Ambient.Alpha = 1
+        ConstAttenuation = 1
+        Diffuse.Red = 1
+        Diffuse.Green = 1
+        Diffuse.Blue = 1
+        Diffuse.Alpha = 1
+        LinearAttenuation = 0
+        QuadraticAttenuation = 0
+        Position.Coordinates = {
+          0000A0400000A0400000A0C00000803F
+        }
+        Specular.Red = 0
+        Specular.Green = 0
+        Specular.Blue = 0
+        Specular.Alpha = 1
+        SpotCutOff = 180
+        SpotExponent = 0
+      end
+      object GLCam: TGLCamera
+        TagFloat = 0
+        DepthOfView = 100
+        FocalLength = 50
+        SceneScale = 5
+        TargetObject = GLDmy
+        Position.Coordinates = {
+          0000C0400000A040000080400000803F
+        }
+      end
+      object GLPts: TGLPoints
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        NoZWrite = False
+        Static = False
+        Style = psRound
+      end
+      object GLPtsW: TGLPoints
+        TagFloat = 0
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        NoZWrite = False
+        Static = False
+      end
+      object GLwMesh: TGLMesh
+        TagFloat = 0
+        Material.BackProperties.Ambient.Red = 0.200000002980232
+        Material.BackProperties.Ambient.Green = 0.200000002980232
+        Material.BackProperties.Ambient.Blue = 0.200000002980232
+        Material.BackProperties.Ambient.Alpha = 1
+        Material.BackProperties.Diffuse.Red = 0.800000011920929
+        Material.BackProperties.Diffuse.Green = 0.800000011920929
+        Material.BackProperties.Diffuse.Blue = 0.800000011920929
+        Material.BackProperties.Diffuse.Alpha = 1
+        Material.BackProperties.Emission.Red = 0
+        Material.BackProperties.Emission.Green = 0
+        Material.BackProperties.Emission.Blue = 0
+        Material.BackProperties.Emission.Alpha = 1
+        Material.BackProperties.Specular.Red = 0
+        Material.BackProperties.Specular.Green = 0
+        Material.BackProperties.Specular.Blue = 0
+        Material.BackProperties.Specular.Alpha = 1
+        Material.FrontProperties.Ambient.Red = 0.200000002980232
+        Material.FrontProperties.Ambient.Green = 0.200000002980232
+        Material.FrontProperties.Ambient.Blue = 0.200000002980232
+        Material.FrontProperties.Ambient.Alpha = 1
+        Material.FrontProperties.Diffuse.Red = 0.800000011920929
+        Material.FrontProperties.Diffuse.Green = 0.800000011920929
+        Material.FrontProperties.Diffuse.Blue = 0.800000011920929
+        Material.FrontProperties.Diffuse.Alpha = 1
+        Material.FrontProperties.Emission.Red = 0
+        Material.FrontProperties.Emission.Green = 0
+        Material.FrontProperties.Emission.Blue = 0
+        Material.FrontProperties.Emission.Alpha = 1
+        Material.FrontProperties.Specular.Red = 0
+        Material.FrontProperties.Specular.Green = 0
+        Material.FrontProperties.Specular.Blue = 0
+        Material.FrontProperties.Specular.Alpha = 1
+        Material.Texture.EnvColor.Red = 0
+        Material.Texture.EnvColor.Green = 0
+        Material.Texture.EnvColor.Blue = 0
+        Material.Texture.EnvColor.Alpha = 0
+        Material.Texture.BorderColor.Red = 0
+        Material.Texture.BorderColor.Green = 0
+        Material.Texture.BorderColor.Blue = 0
+        Material.Texture.BorderColor.Alpha = 0
+        Material.PolygonMode = pmLines
+        PitchAngle = 0
+        RollAngle = 0
+        TurnAngle = 0
+        Mode = mmTriangles
+      end
+    end
+  end
+  object ODXML: TOpenDialog
+    left = 632
+    top = 688
+  end
+  object ODWPhi: TOpenDialog
+    left = 576
+    top = 672
+  end
+  object ODDataPoints: TOpenDialog
+    left = 632
+    top = 640
+  end
+end

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="14">
+      <Unit0>
+        <Filename Value="SGTM.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="319"/>
+        <CursorPos X="49" Y="340"/>
+        <UsageCount Value="99"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="../GTMapTool/ucgtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UcGTM"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="19"/>
+        <CursorPos X="3" Y="331"/>
+        <UsageCount Value="99"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../GTMapTool/ugtmbase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMBase"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="322"/>
+        <CursorPos Y="343"/>
+        <UsageCount Value="99"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../GTMapTool/ugtmfull.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMFull"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="212"/>
+        <CursorPos X="17" Y="212"/>
+        <UsageCount Value="99"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../GTMapTool/ugtmmn.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="99"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../GTMapTool/ugtmsparse.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="99"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../GTMapTool/ugtmxml.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="99"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../GTMapTool/uigtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="99"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../ISIDAKernel/dmath/units/ulinalg.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="110"/>
+        <CursorPos X="3" Y="110"/>
+        <UsageCount Value="99"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../ISIDAKernel/isida_descriptor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="99"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="usggtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSgGTM"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="139"/>
+        <CursorPos X="21" Y="126"/>
+        <UsageCount Value="93"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="uproc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uProc"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="12"/>
+        <CursorPos X="9" Y="41"/>
+        <UsageCount Value="89"/>
+        <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="usgtm.pas"/>
+        <UnitName Value="uSGTM"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="9"/>
+        <UsageCount Value="19"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../GTMapTool/unitlicence.pas"/>
+        <UnitName Value="UnitLicence"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="94"/>
+        <CursorPos X="15" Y="14"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit13>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="usggtm.pas"/>
+        <Caret Line="88" Column="36" TopLine="81"/>
+      </Position1>
+      <Position2>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="230" Column="64" TopLine="209"/>
+      </Position2>
+      <Position3>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="9" Column="46"/>
+      </Position3>
+      <Position4>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="144" Column="17" TopLine="124"/>
+      </Position4>
+      <Position5>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="212" TopLine="183"/>
+      </Position5>
+      <Position6>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="213" TopLine="183"/>
+      </Position6>
+      <Position7>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="214" TopLine="183"/>
+      </Position7>
+      <Position8>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="218" TopLine="184"/>
+      </Position8>
+      <Position9>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="219" TopLine="185"/>
+      </Position9>
+      <Position10>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="220" TopLine="186"/>
+      </Position10>
+      <Position11>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="221" TopLine="187"/>
+      </Position11>
+      <Position12>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="222" TopLine="188"/>
+      </Position12>
+      <Position13>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="224" TopLine="190"/>
+      </Position13>
+      <Position14>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="213" TopLine="190"/>
+      </Position14>
+      <Position15>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="214" TopLine="190"/>
+      </Position15>
+      <Position16>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="215" TopLine="190"/>
+      </Position16>
+      <Position17>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="216" TopLine="190"/>
+      </Position17>
+      <Position18>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="217" TopLine="190"/>
+      </Position18>
+      <Position19>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="218" TopLine="190"/>
+      </Position19>
+      <Position20>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="219" TopLine="190"/>
+      </Position20>
+      <Position21>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="220" TopLine="190"/>
+      </Position21>
+      <Position22>
+        <Filename Value="../GTMapTool/ucgtm.pas"/>
+        <Caret Line="43" Column="20" TopLine="26"/>
+      </Position22>
+      <Position23>
+        <Filename Value="../../ISIDAKernel/dmath/units/ulinalg.pas"/>
+      </Position23>
+      <Position24>
+        <Filename Value="../../ISIDAKernel/dmath/units/ulinalg.pas"/>
+        <Caret Line="22" Column="11"/>
+      </Position24>
+      <Position25>
+        <Filename Value="SGTM.lpr"/>
+        <Caret Line="193" Column="4" TopLine="168"/>
+      </Position25>
+      <Position26>
+        <Filename Value="../GTMapTool/unitlicence.pas"/>
+      </Position26>
+      <Position27>
+        <Filename Value="usggtm.pas"/>
+        <Caret Line="47" Column="49" TopLine="10"/>
+      </Position27>
+      <Position28>
+        <Filename Value="../GTMapTool/ugtmfull.pas"/>
+        <Caret Line="53" Column="21" TopLine="23"/>
+      </Position28>
+      <Position29>
+        <Filename Value="usggtm.pas"/>
+        <Caret Line="126" Column="21" TopLine="139"/>
+      </Position29>
+      <Position30>
+        <Filename Value="uproc.pas"/>
+        <Caret Line="41" Column="9" TopLine="12"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="1" ActiveMode="default">
+        <Mode0 Name="default">
+          <local>
+            <CommandLineParams Value="-o toto -i space1.svm,space2.svm -m 10 -v 0.5"/>
+            <WorkingDirectory Value="/home/marcou/workdir/ISIDAGTM2020/SGTM/example"/>
+          </local>
+        </Mode0>
+      </Modes>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="2">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="SGTM.lpr"/>
+        <Line Value="243"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="SGTM.lpr"/>
+        <Line Value="249"/>
+      </Item2>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

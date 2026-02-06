@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units Count="17">
+      <Unit0>
+        <Filename Value="xGTMapTool.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="12" Y="19"/>
+        <UsageCount Value="381"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="uxgtmaptool.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FGTMapTool"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uxGTMapTool"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="125"/>
+        <CursorPos X="45" Y="143"/>
+        <UsageCount Value="381"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../unitproc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitProc"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="456"/>
+        <CursorPos Y="471"/>
+        <UsageCount Value="369"/>
+        <Bookmarks Count="1">
+          <Item0 X="129" Y="261"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../ucgtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UcGTM"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="36"/>
+        <CursorPos Y="60"/>
+        <UsageCount Value="369"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../ugtmbase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMBase"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="279"/>
+        <CursorPos X="10" Y="286"/>
+        <UsageCount Value="369"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../ugtm_options.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="366"/>
+        <CursorPos X="9" Y="386"/>
+        <UsageCount Value="369"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../../ISIDAKernel/isida_descriptor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ISIDA_descriptor"/>
+        <EditorIndex Value="4"/>
+        <UsageCount Value="369"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../ISIDAKernel/dmath/units/utypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <UsageCount Value="369"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../unitlicence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitLicence"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="175"/>
+        <CursorPos X="21" Y="208"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../ISIDAKernel/dmath/units/ulinalg.pas"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="17"/>
+        <CursorPos X="11" Y="31"/>
+        <UsageCount Value="137"/>
+        <Loaded Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../ugtmsparse.pas"/>
+        <UnitName Value="UGTMSparse"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="155"/>
+        <CursorPos X="36" Y="36"/>
+        <UsageCount Value="136"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../ugtmmn.pas"/>
+        <UnitName Value="UGTMMN"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="121"/>
+        <CursorPos X="3" Y="106"/>
+        <UsageCount Value="136"/>
+        <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../ugtmxml.pas"/>
+        <UnitName Value="UGTMXML"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="563"/>
+        <CursorPos Y="583"/>
+        <UsageCount Value="101"/>
+        <Loaded Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="/lazarus/fpc/3.0.4/source/packages/rtl-objpas/src/inc/dateutil.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="342"/>
+        <CursorPos X="10" Y="362"/>
+        <UsageCount Value="1"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../ugtmfull.pas"/>
+        <UnitName Value="UGTMFull"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="186"/>
+        <CursorPos Y="192"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../../../ISIDAKernel/iosvm.pas"/>
+        <UnitName Value="ioSVM"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="77"/>
+        <CursorPos Y="77"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="/usr/share/lazarus/2.0.10/lcl/lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="98"/>
+        <CursorPos Y="114"/>
+        <UsageCount Value="9"/>
+      </Unit16>
+    </Units>
+    <OtherDefines Count="1">
+      <Define0 Value="GUI"/>
+    </OtherDefines>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position1>
+      <Position2>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="347" TopLine="332"/>
+      </Position2>
+      <Position3>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position3>
+      <Position4>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="348" TopLine="333"/>
+      </Position4>
+      <Position5>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position5>
+      <Position6>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="358" Column="66" TopLine="334"/>
+      </Position6>
+      <Position7>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position7>
+      <Position8>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="350" TopLine="335"/>
+      </Position8>
+      <Position9>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="357" TopLine="335"/>
+      </Position9>
+      <Position10>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position10>
+      <Position11>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="358" TopLine="343"/>
+      </Position11>
+      <Position12>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position12>
+      <Position13>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="366" TopLine="351"/>
+      </Position13>
+      <Position14>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position14>
+      <Position15>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="295" TopLine="278"/>
+      </Position15>
+      <Position16>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="367" TopLine="352"/>
+      </Position16>
+      <Position17>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position17>
+      <Position18>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="369" TopLine="354"/>
+      </Position18>
+      <Position19>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position19>
+      <Position20>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="370" TopLine="355"/>
+      </Position20>
+      <Position21>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="371" TopLine="355"/>
+      </Position21>
+      <Position22>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position22>
+      <Position23>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="374" TopLine="359"/>
+      </Position23>
+      <Position24>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="376" TopLine="359"/>
+      </Position24>
+      <Position25>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="378" TopLine="359"/>
+      </Position25>
+      <Position26>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="385" TopLine="359"/>
+      </Position26>
+      <Position27>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="7"/>
+      </Position27>
+      <Position28>
+        <Filename Value="../ugtm_options.pas"/>
+        <Caret Line="386" Column="11" TopLine="371"/>
+      </Position28>
+      <Position29>
+        <Filename Value="uxgtmaptool.pas"/>
+        <Caret Line="151" TopLine="124"/>
+      </Position29>
+      <Position30>
+        <Filename Value="uxgtmaptool.pas"/>
+        <Caret Line="152" Column="21" TopLine="124"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
+    <HistoryLists Count="2">
+      <List0 Name="WorkingDirectory" Type="File" Count="5">
+        <Item1 Value="/home/marcou/workdir/ISIDAGTM2024/GTMapTool/xgtmaptool"/>
+        <Item2 Value="H:/GIT_SOFT/ISIDAGTM2024/GTMapTool/xgtmaptool"/>
+        <Item3 Value="H:\GIT_SOFT\ISIDAGTM2022\GTMapTool\xgtmaptool"/>
+        <Item4 Value="\home\marcou\workdir\ISIDAGTM2020\GTMapTool\xgtmaptool"/>
+        <Item5 Value="H:/GIT_SOFT/ISIDAGTM2022/GTMapTool/xgtmaptool"/>
+      </List0>
+      <List1 Name="LaunchingApplication" Type="File" Count="3">
+        <Item1 Value="C:\Windows\system32\cmd.exe \C ${TargetCmdLine}"/>
+        <Item2 Value="C:\Windows\system32\cmd.exe /C ${TargetCmdLine}"/>
+        <Item3 Value="/usr/bin/gnome-terminal -t &apos;Lazarus Run Output&apos; -e &apos;$(LazarusDir)/tools/runwait.sh $(TargetCmdLine)&apos;"/>
+      </List1>
+    </HistoryLists>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="uxgtmaptool.pas"/>
+        <Line Value="100"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,12 @@
+object Form2: TForm2
+  Left = 16
+  Height = 600
+  Top = 156
+  Width = 600
+  Caption = 'Landscape'
+  Color = clWhite
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnPaint = FormPaint
+  LCLVersion = '1.6.4.0'
+end

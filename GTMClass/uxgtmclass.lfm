@@ -1,0 +1,634 @@
+object FrmxGTMClass: TFrmxGTMClass
+  Left = 375
+  Height = 653
+  Top = 57
+  Width = 592
+  Caption = 'xGTMClass'
+  ClientHeight = 653
+  ClientWidth = 592
+  LCLVersion = '2.0.8.0'
+  object BtOK: TButton
+    AnchorSideTop.Control = BtQuit
+    AnchorSideRight.Control = BtQuit
+    AnchorSideBottom.Control = BtQuit
+    AnchorSideBottom.Side = asrBottom
+    Left = 419
+    Height = 23
+    Top = 607
+    Width = 71
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Around = 1
+    Caption = 'OK'
+    OnClick = BtOKClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object BtQuit: TButton
+    Left = 491
+    Height = 25
+    Top = 606
+    Width = 71
+    Anchors = []
+    BorderSpacing.Around = 1
+    Caption = 'Quit'
+    OnClick = BtQuitClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object EdtModel: TEdit
+    AnchorSideLeft.Control = LblModel
+    AnchorSideTop.Control = LblModel
+    AnchorSideTop.Side = asrBottom
+    Left = 9
+    Height = 22
+    Hint = 'File name of the GTM model (XML)'
+    Top = 25
+    Width = 534
+    BorderSpacing.Around = 1
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    TextHint = 'Enter a GTM model file name (XML)'
+  end
+  object LblModel: TLabel
+    Left = 8
+    Height = 16
+    Top = 8
+    Width = 55
+    Caption = 'GTM file:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object EdtResp: TEdit
+    AnchorSideLeft.Control = LblResp
+    AnchorSideTop.Control = LblResp
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdtModel
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 22
+    Hint = 'Responsibilities file (*R.svm). On each line are the responsibilities of a molecule projected on the GTM manifold.'
+    Top = 65
+    Width = 535
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 1
+    BorderSpacing.Bottom = 1
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    TextHint = 'Enter a responsibilities file name (*R.svm)'
+  end
+  object LblResp: TLabel
+    AnchorSideLeft.Control = LblModel
+    AnchorSideTop.Control = EdtModel
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 16
+    Top = 48
+    Width = 127
+    Caption = 'Responsabillities file:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object BtModelChose: TButton
+    AnchorSideLeft.Control = EdtModel
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EdtModel
+    AnchorSideBottom.Control = EdtModel
+    AnchorSideBottom.Side = asrBottom
+    Left = 544
+    Height = 20
+    Top = 26
+    Width = 40
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Around = 1
+    Caption = '...'
+    OnClick = BtModelChoseClick
+    ParentFont = False
+    TabOrder = 4
+  end
+  object BtRespChose: TButton
+    AnchorSideLeft.Control = BtModelChose
+    AnchorSideTop.Control = EdtResp
+    AnchorSideRight.Control = BtModelChose
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdtResp
+    AnchorSideBottom.Side = asrBottom
+    Left = 545
+    Height = 20
+    Top = 66
+    Width = 38
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 1
+    Caption = '...'
+    OnClick = BtRespChoseClick
+    ParentFont = False
+    TabOrder = 5
+  end
+  object EdtOut: TEdit
+    AnchorSideLeft.Control = LblOut
+    AnchorSideTop.Control = LblOut
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdtResp
+    AnchorSideRight.Side = asrBottom
+    Left = 9
+    Height = 22
+    Hint = 'Output files will be created based on this value'
+    Top = 145
+    Width = 534
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 1
+    BorderSpacing.Bottom = 1
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+    TextHint = 'Output base file name'
+  end
+  object LblOut: TLabel
+    AnchorSideLeft.Control = LblModel
+    AnchorSideTop.Control = EdtProp
+    AnchorSideTop.Side = asrBottom
+    Left = 9
+    Height = 16
+    Top = 128
+    Width = 53
+    BorderSpacing.Around = 1
+    Caption = 'Outputs:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object BtOutChose: TButton
+    AnchorSideLeft.Control = EdtOut
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EdtOut
+    AnchorSideRight.Control = BtModelChose
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdtOut
+    AnchorSideBottom.Side = asrBottom
+    Left = 543
+    Height = 22
+    Top = 145
+    Width = 41
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = '...'
+    OnClick = BtOutChoseClick
+    ParentFont = False
+    TabOrder = 7
+  end
+  object EdtProp: TEdit
+    AnchorSideLeft.Control = LblProp
+    AnchorSideTop.Control = LblProp
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdtModel
+    AnchorSideRight.Side = asrBottom
+    Left = 9
+    Height = 22
+    Hint = 'Properties file (.PRP). First line is a comment. Then, each line of a property file is the property value of the molecule associated to the responsibilities stored in the responsibilities file.'
+    Top = 105
+    Width = 534
+    Anchors = [akTop, akLeft, akRight]
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+    TextHint = 'Enter a property file name (.PRP)'
+  end
+  object LblProp: TLabel
+    AnchorSideLeft.Control = LblModel
+    AnchorSideTop.Control = EdtResp
+    AnchorSideTop.Side = asrBottom
+    Left = 9
+    Height = 16
+    Top = 88
+    Width = 78
+    BorderSpacing.Around = 1
+    Caption = 'Property file:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object BtPropChose: TButton
+    AnchorSideLeft.Control = EdtProp
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EdtProp
+    AnchorSideRight.Control = BtModelChose
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdtProp
+    AnchorSideBottom.Side = asrBottom
+    Left = 544
+    Height = 20
+    Top = 106
+    Width = 39
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 1
+    Caption = '...'
+    OnClick = BtPropChoseClick
+    ParentFont = False
+    TabOrder = 9
+  end
+  object EdtAuthor: TEdit
+    AnchorSideLeft.Control = LblAuthor
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EdtPropName
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdtPropName
+    AnchorSideRight.Side = asrBottom
+    Left = 255
+    Height = 22
+    Hint = 'Type the name of the author'
+    Top = 211
+    Width = 286
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 1
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 10
+    TextHint = 'Author name and surname'
+  end
+  object LblAuthor: TLabel
+    AnchorSideTop.Control = EdtAuthor
+    AnchorSideRight.Control = EdtAuthor
+    AnchorSideBottom.Control = EdtAuthor
+    AnchorSideBottom.Side = asrBottom
+    Left = 210
+    Height = 20
+    Top = 212
+    Width = 44
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Around = 1
+    Caption = 'Author:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object EdtTitle: TEdit
+    AnchorSideLeft.Control = LblTitle
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EdtAuthor
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdtPropName
+    AnchorSideRight.Side = asrBottom
+    Left = 254
+    Height = 22
+    Hint = 'The title of the GTM model'
+    Top = 234
+    Width = 287
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 1
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 11
+    TextHint = 'Title of the model'
+  end
+  object LblTitle: TLabel
+    AnchorSideLeft.Control = LblAuthor
+    AnchorSideTop.Control = EdtTitle
+    AnchorSideRight.Control = LblAuthor
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdtTitle
+    AnchorSideBottom.Side = asrBottom
+    Left = 223
+    Height = 20
+    Top = 235
+    Width = 30
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Around = 1
+    Caption = 'Title:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object MmLog: TMemo
+    AnchorSideLeft.Control = LblModel
+    AnchorSideTop.Control = FSEClsThrd
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdtModel
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BtQuit
+    Left = 8
+    Height = 217
+    Top = 369
+    Width = 535
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 20
+    Lines.Strings = (
+      '*****************************************'
+      '* ISIDA/xGTMClass'
+      '*'
+      '* Build a classification model based on a GTM model of the data'
+      '*'
+      '* A. Lin, G. Marcou, D. Horvath, F. Bonachera, A. Varnek'
+      '* University of Strasbourg, 2020'
+      '*'
+      '*****************************************'
+    )
+    OnChange = MmLogChange
+    ParentFont = False
+    ScrollBars = ssBoth
+    TabOrder = 12
+  end
+  object EdtComment: TEdit
+    AnchorSideLeft.Control = LblComment
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EdtTitle
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdtPropName
+    AnchorSideRight.Side = asrBottom
+    Left = 254
+    Height = 22
+    Hint = 'Give some comments about the model (version, data of creation, units...)'
+    Top = 257
+    Width = 287
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 1
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 13
+    TextHint = 'Comments about the model'
+  end
+  object LblComment: TLabel
+    AnchorSideLeft.Control = LblAuthor
+    AnchorSideTop.Control = EdtComment
+    AnchorSideRight.Control = LblAuthor
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdtComment
+    AnchorSideBottom.Side = asrBottom
+    Left = 184
+    Height = 20
+    Top = 258
+    Width = 69
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Around = 1
+    Caption = 'Comments:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object EdtPropName: TEdit
+    AnchorSideLeft.Control = LblPropName
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EdtOut
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdtOut
+    AnchorSideRight.Side = asrBottom
+    Left = 259
+    Height = 22
+    Hint = 'A short name for the property (254 characters)'
+    Top = 188
+    Width = 283
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 20
+    BorderSpacing.Around = 1
+    MaxLength = 254
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 14
+    TextHint = 'Short property name'
+  end
+  object LblPropName: TLabel
+    AnchorSideTop.Control = EdtPropName
+    AnchorSideRight.Control = EdtPropName
+    AnchorSideBottom.Control = EdtPropName
+    AnchorSideBottom.Side = asrBottom
+    Left = 165
+    Height = 20
+    Top = 189
+    Width = 93
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Around = 1
+    Caption = 'Property name:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object RBtPred: TRadioButton
+    AnchorSideLeft.Control = RBtBuild
+    AnchorSideTop.Control = RBtBuild
+    AnchorSideTop.Side = asrBottom
+    Left = 11
+    Height = 18
+    Hint = 'Use a previously build model'
+    Top = 207
+    Width = 63
+    BorderSpacing.Around = 1
+    Caption = 'Predict'
+    OnChange = RBtPredChange
+    ParentFont = False
+    TabOrder = 15
+  end
+  object RBtBuild: TRadioButton
+    AnchorSideLeft.Control = EdtOut
+    AnchorSideTop.Control = EdtOut
+    AnchorSideTop.Side = asrBottom
+    Left = 10
+    Height = 18
+    Hint = 'Build a model from scratch'
+    Top = 188
+    Width = 50
+    BorderSpacing.Top = 20
+    BorderSpacing.Around = 1
+    Caption = 'Train'
+    Checked = True
+    OnChange = RBtBuildChange
+    ParentFont = False
+    TabOrder = 16
+    TabStop = True
+  end
+  object RBtValidate: TRadioButton
+    AnchorSideLeft.Control = RBtBuild
+    AnchorSideTop.Control = RBtPred
+    AnchorSideTop.Side = asrBottom
+    Left = 11
+    Height = 18
+    Top = 226
+    Width = 105
+    BorderSpacing.Around = 1
+    Caption = 'Cross-validate'
+    OnChange = RBtValidateChange
+    ParentFont = False
+    TabOrder = 17
+  end
+  object SEfolds: TSpinEdit
+    AnchorSideLeft.Control = RBtValidate
+    AnchorSideTop.Control = RBtValidate
+    AnchorSideTop.Side = asrBottom
+    Left = 12
+    Height = 21
+    Top = 245
+    Width = 50
+    BorderSpacing.Around = 1
+    Enabled = False
+    ParentFont = False
+    TabOrder = 18
+    Value = 10
+  end
+  object LblFolds: TLabel
+    AnchorSideLeft.Control = SEfolds
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = SEfolds
+    AnchorSideTop.Side = asrCenter
+    Left = 67
+    Height = 16
+    Top = 247
+    Width = 30
+    BorderSpacing.Left = 4
+    BorderSpacing.Around = 1
+    Caption = 'folds'
+    Enabled = False
+    ParentColor = False
+    ParentFont = False
+  end
+  object FSEminResp: TFloatSpinEdit
+    AnchorSideLeft.Control = LblminResp
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = CBclassNormalize
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdtComment
+    AnchorSideRight.Side = asrBottom
+    Left = 376
+    Height = 21
+    Hint = 'Minimum responsibility value for a compound to contribute to a node.'
+    Top = 299
+    Width = 165
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 1
+    BorderSpacing.Bottom = 1
+    DecimalPlaces = 6
+    MaxValue = 1
+    MinValue = 0
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 19
+    Value = 0
+  end
+  object LblminResp: TLabel
+    AnchorSideLeft.Control = EdtComment
+    AnchorSideTop.Control = FSEminResp
+    AnchorSideTop.Side = asrCenter
+    Left = 254
+    Height = 16
+    Top = 301
+    Width = 117
+    BorderSpacing.Right = 5
+    Caption = 'Min. Responsibility:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LblMinDens: TLabel
+    AnchorSideTop.Control = FSEminDens
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = LblminResp
+    AnchorSideRight.Side = asrBottom
+    Left = 292
+    Height = 16
+    Top = 323
+    Width = 79
+    Anchors = [akTop, akRight]
+    Caption = 'Min. Density:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object FSEminDens: TFloatSpinEdit
+    AnchorSideLeft.Control = FSEminResp
+    AnchorSideTop.Control = FSEminResp
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = FSEminResp
+    AnchorSideRight.Side = asrBottom
+    Left = 376
+    Height = 21
+    Hint = 'Minimal density value for a node to be included in the landscape.'
+    Top = 321
+    Width = 165
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 1
+    BorderSpacing.Bottom = 1
+    DecimalPlaces = 6
+    MaxValue = 1
+    MinValue = 0
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 20
+    Value = 0
+  end
+  object LblClsThrd: TLabel
+    AnchorSideTop.Control = FSEClsThrd
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = LblminResp
+    AnchorSideRight.Side = asrBottom
+    Left = 246
+    Height = 16
+    Top = 345
+    Width = 125
+    Anchors = [akTop, akRight]
+    Caption = 'Prevalant class ratio:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object FSEClsThrd: TFloatSpinEdit
+    AnchorSideLeft.Control = FSEminResp
+    AnchorSideTop.Control = FSEminDens
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = FSEminResp
+    AnchorSideRight.Side = asrBottom
+    Left = 376
+    Height = 21
+    Hint = 'Maximum allowed value of the ration of the prevalant class to any other.'
+    Top = 343
+    Width = 165
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 1
+    BorderSpacing.Bottom = 1
+    DecimalPlaces = 6
+    MaxValue = 1
+    MinValue = 0
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 21
+    Value = 1
+  end
+  object CBclassNormalize: TCheckBox
+    AnchorSideLeft.Control = EdtComment
+    AnchorSideTop.Control = EdtComment
+    AnchorSideTop.Side = asrBottom
+    Left = 254
+    Height = 18
+    Hint = 'Weight classes to compensate for imbalanced classes.'
+    Top = 280
+    Width = 125
+    BorderSpacing.Top = 1
+    BorderSpacing.Bottom = 1
+    Caption = 'Normalize classes'
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 22
+  end
+  object ODModel: TOpenDialog
+    Title = 'Open an existing GTM model file'
+    Filter = 'XML|*.XML;*.xml|All|*'
+    left = 292
+    top = 53
+  end
+  object ODResp: TOpenDialog
+    Title = 'Open an existing responsability file'
+    Filter = 'R.SVM|*R.SVM;*R.svm|All|*'
+    left = 292
+    top = 101
+  end
+  object ODProp: TOpenDialog
+    Filter = 'PRP|*.PRP;*.prp|All|*'
+    left = 292
+    top = 150
+  end
+  object SDOut: TSelectDirectoryDialog
+    Title = 'Select an output directory'
+    left = 292
+    top = 198
+  end
+end

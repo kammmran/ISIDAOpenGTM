@@ -1,0 +1,337 @@
+object FrmGTMReSample: TFrmGTMReSample
+  Left = 451
+  Height = 322
+  Top = 150
+  Width = 749
+  Caption = 'xGTMReSample'
+  ClientHeight = 322
+  ClientWidth = 749
+  LCLVersion = '2.0.8.0'
+  object LblModel: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 10
+    Height = 16
+    Top = 10
+    Width = 74
+    BorderSpacing.Around = 10
+    Caption = 'GTM Model:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LblSVM: TLabel
+    AnchorSideTop.Control = LblModel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = LblModel
+    AnchorSideRight.Side = asrBottom
+    Left = 30
+    Height = 16
+    Top = 36
+    Width = 54
+    Anchors = [akTop, akRight]
+    Caption = 'Data file:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object EdModel: TEdit
+    AnchorSideLeft.Control = LblModel
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblModel
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = BtModel
+    Left = 94
+    Height = 22
+    Hint = 'File of the map to resample (*XML)'
+    Top = 7
+    Width = 560
+    Anchors = [akTop, akLeft, akRight]
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    TextHint = 'GTM model to resample (*.XML)'
+  end
+  object EdSVM: TEdit
+    AnchorSideLeft.Control = EdModel
+    AnchorSideTop.Control = EdModel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdModel
+    AnchorSideRight.Side = asrBottom
+    Left = 94
+    Height = 22
+    Hint = 'Name of the data file to re-project (*.SVM). Optional.'
+    Top = 29
+    Width = 560
+    Anchors = [akTop, akLeft, akRight]
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    TextHint = 'Dataset to re-project of the manifold (*.SVM). Optional'
+  end
+  object BtModel: TButton
+    AnchorSideTop.Control = LblModel
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 664
+    Height = 25
+    Top = 6
+    Width = 75
+    Anchors = [akTop, akRight]
+    BorderSpacing.Around = 10
+    Caption = '...'
+    OnClick = BtModelClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object BtSVM: TButton
+    AnchorSideLeft.Control = BtModel
+    AnchorSideTop.Control = EdSVM
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = BtModel
+    AnchorSideRight.Side = asrBottom
+    Left = 664
+    Height = 25
+    Top = 28
+    Width = 75
+    Anchors = [akTop, akLeft, akRight]
+    Caption = '...'
+    OnClick = BtSVMClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object RBPseudo: TRadioButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = LblOut
+    AnchorSideTop.Side = asrBottom
+    Left = 10
+    Height = 18
+    Hint = 'Generate a pseudo-regular grid on the manifold.'
+    Top = 88
+    Width = 110
+    BorderSpacing.Left = 10
+    BorderSpacing.Top = 10
+    BorderSpacing.Bottom = 5
+    Caption = 'Pseudo-regular'
+    Checked = True
+    OnChange = RBPseudoChange
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+    TabStop = True
+  end
+  object RBRect: TRadioButton
+    AnchorSideLeft.Control = RBPseudo
+    AnchorSideTop.Control = RBPseudo
+    AnchorSideTop.Side = asrBottom
+    Left = 10
+    Height = 18
+    Hint = 'Generate a rectangular grid on the manifold'
+    Top = 111
+    Width = 90
+    BorderSpacing.Top = 5
+    Caption = 'Rectangular'
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+  end
+  object LblWidth: TLabel
+    AnchorSideTop.Control = RBRect
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = LblNodes
+    AnchorSideRight.Side = asrBottom
+    Left = 174
+    Height = 16
+    Top = 112
+    Width = 40
+    Anchors = [akTop, akRight]
+    BorderSpacing.Left = 5
+    Caption = 'Width:'
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object LblNodes: TLabel
+    AnchorSideTop.Control = RBPseudo
+    AnchorSideTop.Side = asrCenter
+    Left = 171
+    Height = 16
+    Top = 89
+    Width = 43
+    Anchors = [akTop]
+    Caption = 'Nodes:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LblHeight: TLabel
+    AnchorSideLeft.Control = SEWidth
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = RBRect
+    AnchorSideTop.Side = asrCenter
+    Left = 325
+    Height = 16
+    Top = 112
+    Width = 44
+    BorderSpacing.Left = 20
+    BorderSpacing.Right = 5
+    Caption = 'Height:'
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object BtOK: TButton
+    AnchorSideRight.Control = BtQuit
+    AnchorSideBottom.Control = BtQuit
+    AnchorSideBottom.Side = asrCenter
+    Left = 579
+    Height = 25
+    Top = 286
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    OnClick = BtOKClick
+    ParentFont = False
+    TabOrder = 6
+  end
+  object BtQuit: TButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 664
+    Height = 25
+    Top = 287
+    Width = 75
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 10
+    Caption = 'Quit'
+    OnClick = BtQuitClick
+    ParentFont = False
+    TabOrder = 7
+  end
+  object SEWidth: TSpinEdit
+    AnchorSideLeft.Control = SENodes
+    AnchorSideTop.Control = LblWidth
+    AnchorSideTop.Side = asrCenter
+    Left = 224
+    Height = 21
+    Hint = 'Number of nodes on the width of the map'
+    Top = 110
+    Width = 81
+    BorderSpacing.Right = 5
+    MaxValue = 1000000000
+    OnChange = SEWidthChange
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+    Visible = False
+  end
+  object SEHeight: TSpinEdit
+    AnchorSideLeft.Control = LblHeight
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblHeight
+    AnchorSideTop.Side = asrCenter
+    Left = 374
+    Height = 21
+    Hint = 'Number of nodes on the height of the map'
+    Top = 110
+    Width = 81
+    BorderSpacing.Left = 5
+    MaxValue = 1000000000
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+    Visible = False
+  end
+  object SENodes: TSpinEdit
+    AnchorSideLeft.Control = LblNodes
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblNodes
+    AnchorSideTop.Side = asrCenter
+    Left = 224
+    Height = 21
+    Hint = 'Number of nodes'
+    Top = 87
+    Width = 81
+    BorderSpacing.Left = 10
+    MaxValue = 1000000000
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 10
+  end
+  object MmLog: TMemo
+    AnchorSideLeft.Control = RBPseudo
+    AnchorSideTop.Control = RBRect
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BtQuit
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BtQuit
+    Left = 10
+    Height = 138
+    Top = 139
+    Width = 729
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 10
+    Lines.Strings = (
+      '************************************'
+      'ISIDA/GTM ReSample'
+      'An application to change to sampling of a GTM model'
+      'G. Marcou, D. Horvath, A. Varnek'
+      'Université de Strasbourg - 2020'
+      '************************************'
+    )
+    ParentFont = False
+    ScrollBars = ssAutoBoth
+    TabOrder = 11
+  end
+  object EdOut: TEdit
+    AnchorSideLeft.Control = LblOut
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblOut
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = EdModel
+    AnchorSideRight.Side = asrBottom
+    Left = 94
+    Height = 22
+    Top = 59
+    Width = 560
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 10
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 12
+    TextHint = 'Output base name'
+  end
+  object LblOut: TLabel
+    AnchorSideTop.Control = LblSVM
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = LblModel
+    AnchorSideRight.Side = asrBottom
+    Left = 38
+    Height = 16
+    Top = 62
+    Width = 46
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 10
+    Caption = 'Output:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object ODModel: TOpenDialog
+    Filter = 'XML|*.xml;*.XML|All|*'
+    left = 663
+    top = 8
+  end
+  object ODSVM: TOpenDialog
+    Filter = 'SVM|*.svm;*.SVM|All|*'
+    left = 703
+    top = 40
+  end
+end

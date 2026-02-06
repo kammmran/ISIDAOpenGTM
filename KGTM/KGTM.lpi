@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+        <MainUnitHasScaledStatement Value="False"/>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="KGTM"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+    </General>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <Units Count="18">
+      <Unit0>
+        <Filename Value="KGTM.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="../../ISIDAKernel/isida_descriptor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ISIDA_descriptor"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../../ISIDAKernel/iosvm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ioSVM"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../ISIDAKernel/unitgrambase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitGramBase"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../ISIDAKernel/unitkpca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitKPCA"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../ISIDAKernel/dmath/units/ueigsym.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../ISIDAKernel/dmath/units/ueigval.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../ISIDAKernel/dmath/units/ueigvec.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../ISIDAKernel/dmath/units/utypes.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../GTMapTool/ucgtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UcGTM"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../GTMapTool/ugtmbase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMBase"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../GTMapTool/ugtmfull.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMFull"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../GTMapTool/ugtmxml.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMXML"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../GTMapTool/uigtm.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../GTMapTool/unitlicence.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="unitproc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitProc"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="unitkgtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitKGTM"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="ukgtm_options.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit17>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="KGTM"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="../../ISIDAKernel;../../ISIDAKernel/dmath/units;../GTMapTool"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

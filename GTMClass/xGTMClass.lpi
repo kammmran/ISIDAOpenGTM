@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="11"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="xGTMClass"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0"/>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="10">
+      <Unit0>
+        <Filename Value="xGTMClass.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="uxgtmclass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmxGTMClass"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uxGTMClass"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="ugtmclass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMClass"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="gtmclassfunctions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GTMClassFunctions"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../ModelAnalyzerC/unitclsstats.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitClsStats"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../ModelAnalyzerC/unitcvsvm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitCVsvm"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../GTMapTool/ugtmbase.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../ISIDAKernel/dmath/units/utypes.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../ISIDAKernel/isida_descriptor.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../GTMapTool/unitlicence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitLicence"/>
+      </Unit9>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="xGTMClass"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="../../ModelAnalyzerC;../GTMapTool;../../ISIDAKernel/dmath/units;../../ISIDAKernel"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CustomOptions Value="-dGUI -dLOCALES"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

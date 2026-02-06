@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units Count="31">
+      <Unit0>
+        <Filename Value="KGTM.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="45" Y="22"/>
+        <UsageCount Value="228"/>
+        <Bookmarks Count="1">
+          <Item0 X="6" Y="42"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="../../ISIDAKernel/isida_descriptor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ISIDA_descriptor"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="438"/>
+        <CursorPos X="9" Y="444"/>
+        <UsageCount Value="228"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../../ISIDAKernel/iosvm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ioSVM"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="71"/>
+        <CursorPos X="12" Y="97"/>
+        <UsageCount Value="228"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../ISIDAKernel/unitgrambase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitGramBase"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="22"/>
+        <CursorPos X="15" Y="54"/>
+        <UsageCount Value="228"/>
+        <Bookmarks Count="2">
+          <Item0 X="9" Y="214" ID="3"/>
+          <Item1 X="9" Y="240" ID="5"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../ISIDAKernel/unitkpca.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitKPCA"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="51"/>
+        <CursorPos Y="59"/>
+        <UsageCount Value="228"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../ISIDAKernel/dmath/units/ueigsym.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6" Y="5"/>
+        <UsageCount Value="228"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../ISIDAKernel/dmath/units/ueigval.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="228"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../ISIDAKernel/dmath/units/ueigvec.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="10"/>
+        <UsageCount Value="228"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../ISIDAKernel/dmath/units/utypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6" Y="11"/>
+        <UsageCount Value="228"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../GTMapTool/ucgtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UcGTM"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="780"/>
+        <CursorPos X="3" Y="786"/>
+        <UsageCount Value="226"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../GTMapTool/ugtmbase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMBase"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="37"/>
+        <CursorPos X="17" Y="49"/>
+        <UsageCount Value="226"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../GTMapTool/ugtmfull.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMFull"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="656"/>
+        <CursorPos X="3" Y="660"/>
+        <UsageCount Value="226"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../GTMapTool/ugtmxml.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMXML"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="18"/>
+        <CursorPos X="46" Y="18"/>
+        <UsageCount Value="226"/>
+        <Loaded Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../GTMapTool/uigtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="226"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../GTMapTool/unitlicence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="226"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="unitproc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitProc"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="31" Y="33"/>
+        <FoldState Value=" T0iR2{iU"/>
+        <UsageCount Value="206"/>
+        <Bookmarks Count="2">
+          <Item0 X="10" Y="396" ID="2"/>
+          <Item1 X="3" Y="230" ID="1"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="unitkgtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitKGTM"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="133"/>
+        <CursorPos X="3" Y="160"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="ukgtm_options.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="32" Y="12"/>
+        <UsageCount Value="216"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../../ISIDAKernel/dmath/units/ulinalg.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="340"/>
+        <CursorPos Y="357"/>
+        <UsageCount Value="55"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="../../ISIDAKernel/dmath/units/upca.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="248"/>
+        <CursorPos X="10" Y="268"/>
+        <UsageCount Value="51"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="ukgtmxml.pas"/>
+        <UnitName Value="UKGTMXML"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="332"/>
+        <CursorPos X="7" Y="351"/>
+        <UsageCount Value="101"/>
+        <Loaded Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="../../ISIDAKernel/dmath/units/ubalance.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="72" Y="17"/>
+        <UsageCount Value="42"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../../ISIDAKernel/dmath/units/types.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="8" Y="12"/>
+        <UsageCount Value="42"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="unitkgtmstream.pas"/>
+        <UnitName Value="UnitKGTMStream"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="143"/>
+        <CursorPos X="5" Y="150"/>
+        <UsageCount Value="100"/>
+        <Loaded Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <UnitName Value="UnitKPCAStream"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="337"/>
+        <CursorPos Y="348"/>
+        <UsageCount Value="100"/>
+        <Loaded Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../../ISIDAKernel/unitgramstream.pas"/>
+        <UnitName Value="UnitGramStream"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="59"/>
+        <CursorPos X="32" Y="73"/>
+        <UsageCount Value="100"/>
+        <Bookmarks Count="1">
+          <Item0 Y="207" ID="4"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="../../ISIDAKernel/rastream.pas"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="19"/>
+        <CursorPos X="27" Y="50"/>
+        <UsageCount Value="129"/>
+        <Loaded Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="ukgtmstreamxml.pas"/>
+        <UnitName Value="UKGTMStreamXML"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="340"/>
+        <CursorPos Y="364"/>
+        <UsageCount Value="141"/>
+        <Loaded Value="True"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1011"/>
+        <CursorPos X="3" Y="1036"/>
+        <UsageCount Value="52"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/packages/fcl-base/src/streamex.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="137"/>
+        <CursorPos X="17" Y="161"/>
+        <UsageCount Value="52"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="/usr/share/fpcsrc/3.2.2/packages/fcl-base/src/contnrs.pp"/>
+        <UnitName Value="Contnrs"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="69"/>
+        <CursorPos X="14" Y="86"/>
+        <UsageCount Value="8"/>
+      </Unit30>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="../../ISIDAKernel/iosvm.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="../../ISIDAKernel/iosvm.pas"/>
+        <Caret Line="19" Column="10"/>
+      </Position2>
+      <Position3>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="640" Column="17" TopLine="620"/>
+      </Position3>
+      <Position4>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="36" Column="15" TopLine="20"/>
+      </Position4>
+      <Position5>
+        <Filename Value="../../ISIDAKernel/unitgramstream.pas"/>
+        <Caret Line="74" Column="4" TopLine="48"/>
+      </Position5>
+      <Position6>
+        <Filename Value="../../ISIDAKernel/unitgramstream.pas"/>
+        <Caret Line="35" Column="15" TopLine="18"/>
+      </Position6>
+      <Position7>
+        <Filename Value="../../ISIDAKernel/unitgramstream.pas"/>
+        <Caret Line="46" Column="19" TopLine="21"/>
+      </Position7>
+      <Position8>
+        <Filename Value="../../ISIDAKernel/unitgramstream.pas"/>
+        <Caret Line="181" Column="3" TopLine="180"/>
+      </Position8>
+      <Position9>
+        <Filename Value="../../ISIDAKernel/unitgramstream.pas"/>
+        <Caret Line="35" Column="18" TopLine="22"/>
+      </Position9>
+      <Position10>
+        <Filename Value="../../ISIDAKernel/rastream.pas"/>
+        <Caret Line="162" Column="3" TopLine="155"/>
+      </Position10>
+      <Position11>
+        <Filename Value="../../ISIDAKernel/unitgramstream.pas"/>
+        <Caret Line="78" Column="10" TopLine="72"/>
+      </Position11>
+      <Position12>
+        <Filename Value="unitkgtmstream.pas"/>
+        <Caret Line="149" Column="12" TopLine="142"/>
+      </Position12>
+      <Position13>
+        <Filename Value="unitkgtmstream.pas"/>
+        <Caret Line="41" Column="15" TopLine="25"/>
+      </Position13>
+      <Position14>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="157" Column="7" TopLine="133"/>
+      </Position14>
+      <Position15>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="33" Column="15" TopLine="11"/>
+      </Position15>
+      <Position16>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="352" Column="17" TopLine="333"/>
+      </Position16>
+      <Position17>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="231" TopLine="200"/>
+      </Position17>
+      <Position18>
+        <Filename Value="unitproc.pas"/>
+        <Caret Line="419" TopLine="393"/>
+      </Position18>
+      <Position19>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="310" TopLine="294"/>
+      </Position19>
+      <Position20>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="348" TopLine="332"/>
+      </Position20>
+      <Position21>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="349" TopLine="332"/>
+      </Position21>
+      <Position22>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="351" TopLine="332"/>
+      </Position22>
+      <Position23>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="352" TopLine="332"/>
+      </Position23>
+      <Position24>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="355" TopLine="332"/>
+      </Position24>
+      <Position25>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="356" TopLine="332"/>
+      </Position25>
+      <Position26>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="358" TopLine="332"/>
+      </Position26>
+      <Position27>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="359" TopLine="332"/>
+      </Position27>
+      <Position28>
+        <Filename Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Caret Line="348" TopLine="337"/>
+      </Position28>
+      <Position29>
+        <Filename Value="../../ISIDAKernel/unitgramstream.pas"/>
+        <Caret Line="73" TopLine="59"/>
+      </Position29>
+      <Position30>
+        <Filename Value="../../ISIDAKernel/unitgramstream.pas"/>
+        <Caret Line="74" TopLine="59"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="1" ActiveMode="default">
+        <Mode0 Name="default">
+          <local>
+            <CommandLineParams Value="-x titi.xml -b 5 -j -y EC_std_Freq_05Short_10.svm"/>
+            <WorkingDirectory Value="/home/marcou/workdir/ISIDAGTM2022/KGTM/examples"/>
+          </local>
+        </Mode0>
+      </Modes>
+    </RunParams>
+    <HistoryLists Count="3">
+      <List0 Name="WorkingDirectory" Type="File" Count="2">
+        <Item1 Value="/home/marcou/workdir/ISIDAGTM2022/KGTM/examples"/>
+        <Item2 Value="/home/marcou/workdir/ISIDAGTM2021/KGTM/examples"/>
+      </List0>
+      <List1 Name="LaunchingApplication" Type="File" Count="2">
+        <Item2 Value="/usr/bin/gnome-terminal -t &apos;Lazarus Run Output&apos; -e &apos;$(LazarusDir)/tools/runwait.sh $(TargetCmdLine)&apos;"/>
+      </List1>
+      <List2 Name="CommandLineParameters" Count="12">
+        <Item1 Value="-x titi.xml -b 5 -j -y EC_std_Freq_05Short_10.svm"/>
+        <Item2 Value="-i EC_std_Freq_05Short_299.svm -o titi -b 5 -m 5 -M 2"/>
+        <Item3 Value="-x toto.xml -o toto1 -b 5 -j -y EC_std_Freq_05Short_10.svm"/>
+        <Item4 Value="-x titi.xml -i EC_std_Freq_05Short_10.svm -o tititi -b 5 -M 2 -m 5"/>
+        <Item5 Value="-x titi.xml -i EC_std_Freq_05Short.svm -o tititi -b 5 -M 2 -m 5"/>
+        <Item6 Value="-i EC_std_Freq_05Short.svm -o titi -b 5 -M 2 -m 5"/>
+        <Item7 Value="-m titi.xml -i EC_std_Freq_05Short.svm -o tititi -b 5 -M 2 -m 5"/>
+        <Item8 Value="-i EC_std_Freq_05Short_10.svm -o titi -b 5 -M 2 -m 5"/>
+        <Item9 Value="-i T58cl_Freq_01_short.svm -o titi -b 5 -M 2 -m 5"/>
+        <Item10 Value="-i TwoCircles.svm -o titi -b 5 -M 2 -m 5"/>
+        <Item11 Value="-i EC_std_Freq_05Short -b 5 -o toto -m 3  -M 2"/>
+        <Item12 Value="-i EC_std_Freq_05Short -o toto -m 3  -M 2"/>
+      </List2>
+    </HistoryLists>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../../ISIDAKernel/unitkpca.pas"/>
+        <Line Value="392"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../../ISIDAKernel/isida_descriptor.pas"/>
+        <Line Value="344"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="unitkgtm.pas"/>
+        <Line Value="198"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../../ISIDAKernel/unitgramstream.pas"/>
+        <Line Value="177"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Line Value="231"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="unitproc.pas"/>
+        <Line Value="419"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../../ISIDAKernel/unitkpcastream.pas"/>
+        <Line Value="364"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

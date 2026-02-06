@@ -1,0 +1,10 @@
+object Form4: TForm4
+  Left = 1261
+  Height = 600
+  Top = 160
+  Width = 600
+  Caption = 'Landscape'
+  OnCreate = FormCreate
+  OnPaint = FormPaint
+  LCLVersion = '1.6.4.0'
+end

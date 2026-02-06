@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units Count="36">
+      <Unit0>
+        <Filename Value="xGTMView.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="69" Y="22"/>
+        <UsageCount Value="338"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unitgtmview.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormGTMView"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitGTMView"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="171"/>
+        <CursorPos X="173" Y="191"/>
+        <UsageCount Value="338"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../GTMapTool/ugtmxml.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMXML"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="262"/>
+        <CursorPos Y="278"/>
+        <UsageCount Value="336"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../ISIDAKernel/dmath/units/ulinalg.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="336"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../ISIDAKernel/dmath/units/utypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <UsageCount Value="336"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../GTMapTool/ucgtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="336"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../GTMapTool/ugtm_options.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="135"/>
+        <CursorPos X="9" Y="146"/>
+        <UsageCount Value="336"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../GTMapTool/ugtmbase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMBase"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="160"/>
+        <CursorPos Y="160"/>
+        <UsageCount Value="336"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../GTMapTool/ugtmfull.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="336"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../GTMapTool/ugtmmn.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="336"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../GTMapTool/ugtmsparse.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="336"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../GTMapTool/uigtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="336"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../GTMapTool/ulinalgsparse.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="336"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../GTMapTool/unitlicence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitLicence"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="69"/>
+        <CursorPos Y="26"/>
+        <UsageCount Value="336"/>
+        <Loaded Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../../ISIDAKernel/isida_descriptor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ISIDA_descriptor"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="337"/>
+        <UsageCount Value="336"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../../Molecule/unitmoleculegraphic.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitMoleculeGraphic"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="305"/>
+        <CursorPos Y="332"/>
+        <UsageCount Value="242"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="../../Molecule/U_GRAPHES.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="472"/>
+        <CursorPos X="6" Y="478"/>
+        <UsageCount Value="242"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="../../Molecule/U_BASE_GRAPHES.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9"/>
+        <CursorPos X="6" Y="29"/>
+        <UsageCount Value="242"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../../Molecule/U_TYPE_GRAPHES.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="242"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="../../Molecule/unitmoldraw.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitMolDraw"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="717"/>
+        <CursorPos Y="735"/>
+        <UsageCount Value="238"/>
+        <Loaded Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="/Developer/lazarus/lcl/graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="266"/>
+        <CursorPos Y="284"/>
+        <UsageCount Value="13"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="/Developer/lazarus/components/tachart/tasources.pas"/>
+        <UnitName Value="TASources"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="392"/>
+        <CursorPos X="22" Y="395"/>
+        <UsageCount Value="84"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="/Developer/lazarus/components/tachart/tacustomseries.pas"/>
+        <UnitName Value="TACustomSeries"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="20" Y="12"/>
+        <UsageCount Value="84"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="/Developer/lazarus/components/tachart/tacustomsource.pas"/>
+        <UnitName Value="TACustomSource"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="90"/>
+        <CursorPos X="3" Y="101"/>
+        <UsageCount Value="84"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="GLSceneLCL/Source/DesignTime/FGUISkinEditor.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="10" Y="7"/>
+        <UsageCount Value="8"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../../ModelAnalyzerR/unitxmodelanalyzer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="319"/>
+        <CursorPos X="29" Y="324"/>
+        <UsageCount Value="20"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="/usr/lib/lazarus/2.0.0/components/fpvectorial/fpvectorial.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10259"/>
+        <CursorPos X="149" Y="10288"/>
+        <UsageCount Value="8"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="/usr/lib/lazarus/2.0.2/ide/lazarus.pp"/>
+        <UnitName Value="Lazarus"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="8"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="/usr/share/lazarus/2.0.6/lcl/interfaces/gtk2/gtk2wscustommemo.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="105"/>
+        <CursorPos Y="131"/>
+        <UsageCount Value="8"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="../../Molecule/unitatomandbondtype.pas"/>
+        <UnitName Value="unitAtomAndBondType"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="39"/>
+        <CursorPos X="13" Y="65"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="../../Molecule/unitmoleculebase.pas"/>
+        <UnitName Value="UnitMoleculeBase"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="22"/>
+        <CursorPos X="7" Y="711"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="/lazarus/fpc/3.0.4/source/rtl/objpas/sysutils/sysinth.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="3" Y="57"/>
+        <UsageCount Value="9"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="/Library/Lazarus/lcl/forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="616"/>
+        <CursorPos X="15" Y="629"/>
+        <UsageCount Value="10"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="/Library/Lazarus/lcl/include/customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2193"/>
+        <CursorPos X="3" Y="2174"/>
+        <UsageCount Value="10"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="/usr/share/lazarus/2.0.10/lcl/maskedit.pp"/>
+        <UnitName Value="MaskEdit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1122"/>
+        <CursorPos X="57" Y="1143"/>
+        <UsageCount Value="14"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="/usr/share/lazarus/2.0.10/components/lazutils/lazutf8.pas"/>
+        <UnitName Value="LazUTF8"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="467"/>
+        <CursorPos Y="491"/>
+        <UsageCount Value="13"/>
+      </Unit35>
+    </Units>
+    <JumpHistory Count="7" HistoryIndex="6">
+      <Position1>
+        <Filename Value="unitgtmview.pas"/>
+        <Caret Line="507" Column="26" TopLine="478"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unitgtmview.pas"/>
+        <Caret Line="74" Column="15" TopLine="71"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unitgtmview.pas"/>
+        <Caret Line="88" Column="21" TopLine="74"/>
+      </Position3>
+      <Position4>
+        <Filename Value="unitgtmview.pas"/>
+        <Caret Line="78" Column="17" TopLine="68"/>
+      </Position4>
+      <Position5>
+        <Filename Value="unitgtmview.pas"/>
+        <Caret Line="326" Column="58" TopLine="294"/>
+      </Position5>
+      <Position6>
+        <Filename Value="unitgtmview.pas"/>
+        <Caret Line="367" Column="70" TopLine="333"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unitgtmview.pas"/>
+        <Caret Line="78" Column="22" TopLine="58"/>
+      </Position7>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="unit1.pas"/>
+        <Line Value="35"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../../ModelAnalyzerR/unitxmodelanalyzer.pas"/>
+        <Line Value="191"/>
+      </Item>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="unitgtmview.pas"/>
+        <Line Value="386"/>
+      </Item>
+    </BreakPoints>
+    <Watches>
+      <Item>
+        <Expression Value="fvResponsibility[6,101]"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

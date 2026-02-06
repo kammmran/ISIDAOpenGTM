@@ -1,0 +1,505 @@
+object FrmxGTMNodeSelect: TFrmxGTMNodeSelect
+  Left = 596
+  Height = 925
+  Top = 27
+  Width = 921
+  Caption = 'xGTMNodeSelect'
+  ClientHeight = 925
+  ClientWidth = 921
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object MmLog: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BtQuit
+    Left = 6
+    Height = 160
+    Top = 722
+    Width = 909
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    Lines.Strings = (
+      '******************************************************************'
+      '*                                                                '
+      '*                     ISIDA/GTMNodeSelect                        '
+      '*        Select nodes for data generation and zoom               '
+      '*                                                                '
+      '* G. Marcou, Université de Strasbourg                      2024  '
+      '******************************************************************'
+      ''
+    )
+    ScrollBars = ssAutoVertical
+    TabOrder = 17
+  end
+  object PnlGenerate: TPanel
+    AnchorSideLeft.Control = MmLog
+    AnchorSideRight.Control = BtAddFile
+    AnchorSideBottom.Control = MmLog
+    Left = 6
+    Height = 82
+    Top = 634
+    Width = 263
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Right = 12
+    ClientHeight = 82
+    ClientWidth = 263
+    TabOrder = 18
+    Visible = False
+    object EdSamples: TLabeledEdit
+      AnchorSideRight.Control = EdSeed
+      AnchorSideBottom.Control = EdSeed
+      AnchorSideBottom.Side = asrBottom
+      Left = 50
+      Height = 28
+      Top = 47
+      Width = 100
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Right = 6
+      EditLabel.Height = 20
+      EditLabel.Width = 100
+      EditLabel.Caption = 'Nb. samples'
+      EditLabel.ParentColor = False
+      TabOrder = 0
+    end
+    object EdSeed: TLabeledEdit
+      AnchorSideRight.Control = PnlGenerate
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = PnlGenerate
+      AnchorSideBottom.Side = asrBottom
+      Left = 156
+      Height = 28
+      Top = 47
+      Width = 100
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Left = 6
+      BorderSpacing.Right = 6
+      BorderSpacing.Bottom = 6
+      EditLabel.Height = 20
+      EditLabel.Width = 100
+      EditLabel.Caption = 'Seed'
+      EditLabel.ParentColor = False
+      TabOrder = 1
+      Text = '0'
+    end
+  end
+  object PnlZoom: TPanel
+    AnchorSideLeft.Control = MmLog
+    AnchorSideTop.Control = CBZoom
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BtAddFile
+    AnchorSideBottom.Control = CBZoom
+    Left = 6
+    Height = 90
+    Top = 490
+    Width = 263
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Right = 12
+    ClientHeight = 90
+    ClientWidth = 263
+    TabOrder = 21
+    Visible = False
+    object EdIter: TLabeledEdit
+      AnchorSideLeft.Control = PnlZoom
+      AnchorSideRight.Control = EdConv
+      AnchorSideBottom.Control = PnlZoom
+      AnchorSideBottom.Side = asrBottom
+      Left = 50
+      Height = 28
+      Top = 55
+      Width = 100
+      Anchors = [akRight, akBottom]
+      BorderSpacing.Right = 6
+      BorderSpacing.Bottom = 6
+      EditLabel.Height = 20
+      EditLabel.Width = 100
+      EditLabel.Caption = '#Iter'
+      EditLabel.ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      Text = '0'
+      TextHint = 'Number of optimization steps of the zoomed manifold (0 - no optimization)'
+    end
+    object EdConv: TLabeledEdit
+      AnchorSideLeft.Control = EdIter
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = EdIter
+      AnchorSideRight.Control = PnlZoom
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = EdIter
+      AnchorSideBottom.Side = asrCenter
+      Left = 156
+      Height = 28
+      Top = 55
+      Width = 100
+      Anchors = [akTop, akRight]
+      BorderSpacing.Left = 6
+      BorderSpacing.Right = 6
+      EditLabel.Height = 20
+      EditLabel.Width = 100
+      EditLabel.Caption = 'Convergence'
+      EditLabel.ParentColor = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Text = '0.01'
+      TextHint = 'Convergence criteria for re-optimization of the GTM - default 0.01'
+    end
+  end
+  object LBFileList: TListBox
+    AnchorSideLeft.Control = EdSDF
+    AnchorSideTop.Control = EdSDF
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BtQuit
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = MmLog
+    Left = 381
+    Height = 542
+    Top = 174
+    Width = 534
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    ItemHeight = 0
+    MultiSelect = True
+    TabOrder = 0
+  end
+  object EdSDF: TLabeledEdit
+    AnchorSideLeft.Control = EdGTM
+    AnchorSideTop.Control = BtSDF
+    AnchorSideRight.Control = BtSDF
+    Left = 381
+    Height = 28
+    Hint = 'File containing the chemical structures in SDF format.'
+    Top = 140
+    Width = 440
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 375
+    BorderSpacing.Right = 6
+    EditLabel.Height = 20
+    EditLabel.Width = 440
+    EditLabel.Caption = 'SDF file'
+    EditLabel.ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+  end
+  object BtSDF: TButton
+    AnchorSideLeft.Control = BtAddFile
+    AnchorSideTop.Control = EdOutput
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BtSVM
+    AnchorSideRight.Side = asrBottom
+    Left = 827
+    Height = 31
+    Top = 140
+    Width = 88
+    Anchors = [akTop, akRight]
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 38
+    Caption = '...'
+    TabOrder = 2
+    OnClick = BtSDFClick
+  end
+  object BtAddFile: TButton
+    AnchorSideTop.Control = LBFileList
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = LBFileList
+    Left = 281
+    Height = 31
+    Hint = 'Add a file to the file list'
+    Top = 430
+    Width = 94
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 6
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 6
+    Caption = 'Add file'
+    TabOrder = 3
+    OnClick = BtAddFileClick
+  end
+  object BtDelFile: TButton
+    AnchorSideLeft.Control = BtAddFile
+    AnchorSideTop.Control = BtAddFile
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Side = asrBottom
+    Left = 281
+    Height = 31
+    Hint = 'Delete a file from the file list'
+    Top = 467
+    Width = 94
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    Caption = 'Delete file'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+    OnClick = BtDelFileClick
+  end
+  object BtOK: TButton
+    AnchorSideTop.Control = BtQuit
+    AnchorSideRight.Control = BtQuit
+    Left = 715
+    Height = 31
+    Top = 888
+    Width = 94
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 12
+    Caption = 'OK'
+    TabOrder = 5
+    OnClick = BtOKClick
+  end
+  object BtQuit: TButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 821
+    Height = 31
+    Top = 888
+    Width = 94
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 6
+    Caption = 'Quit'
+    TabOrder = 6
+    OnClick = BtQuitClick
+  end
+  object EdXmin: TLabeledEdit
+    AnchorSideLeft.Control = EdOutput
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EdOutput
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BtAddFile
+    Left = 175
+    Height = 28
+    Top = 108
+    Width = 100
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 6
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 6
+    EditLabel.Height = 20
+    EditLabel.Width = 32
+    EditLabel.Caption = 'xmin'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    TabOrder = 7
+  end
+  object EdXmax: TLabeledEdit
+    AnchorSideLeft.Control = EdXmin
+    AnchorSideTop.Control = EdXmin
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdXmin
+    AnchorSideRight.Side = asrBottom
+    Left = 175
+    Height = 28
+    Top = 142
+    Width = 100
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    EditLabel.Height = 20
+    EditLabel.Width = 35
+    EditLabel.Caption = 'xmax'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    TabOrder = 8
+  end
+  object EdYmin: TLabeledEdit
+    AnchorSideLeft.Control = EdXmax
+    AnchorSideTop.Control = EdXmax
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdXmax
+    AnchorSideRight.Side = asrBottom
+    Left = 175
+    Height = 28
+    Top = 176
+    Width = 100
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    EditLabel.Height = 20
+    EditLabel.Width = 32
+    EditLabel.Caption = 'ymin'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    TabOrder = 9
+  end
+  object EdYmax: TLabeledEdit
+    AnchorSideLeft.Control = EdYmin
+    AnchorSideTop.Control = EdYmin
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdYmin
+    AnchorSideRight.Side = asrBottom
+    Left = 175
+    Height = 28
+    Top = 210
+    Width = 100
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    EditLabel.Height = 20
+    EditLabel.Width = 35
+    EditLabel.Caption = 'ymax'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    TabOrder = 10
+  end
+  object EdGTM: TEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = BtGTM
+    AnchorSideRight.Control = BtGTM
+    Left = 6
+    Height = 28
+    Hint = 'Chose a GTM model file (.xml)'
+    Top = 6
+    Width = 809
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 6
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 6
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 11
+    TextHint = 'Chose a GTM model file (.xml)'
+  end
+  object BtGTM: TButton
+    AnchorSideLeft.Control = BtSVM
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = BtQuit
+    AnchorSideRight.Side = asrBottom
+    Left = 821
+    Height = 31
+    Top = 6
+    Width = 94
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    Caption = '...'
+    TabOrder = 12
+    OnClick = BtGTMClick
+  end
+  object EdSVM: TEdit
+    AnchorSideLeft.Control = EdGTM
+    AnchorSideTop.Control = EdGTM
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdGTM
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 28
+    Hint = 'Chose a dataset to project (SVM)'
+    Top = 40
+    Width = 809
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 13
+    TextHint = 'Chose a dataset to project (SVM)'
+  end
+  object BtSVM: TButton
+    AnchorSideLeft.Control = BtGTM
+    AnchorSideTop.Control = EdSVM
+    AnchorSideRight.Control = BtQuit
+    AnchorSideRight.Side = asrBottom
+    Left = 821
+    Height = 31
+    Top = 40
+    Width = 94
+    Anchors = [akTop, akLeft, akRight]
+    Caption = '...'
+    TabOrder = 14
+    OnClick = BtSVMClick
+  end
+  object EdOutput: TEdit
+    AnchorSideLeft.Control = EdSVM
+    AnchorSideTop.Control = EdSVM
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdSVM
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 28
+    Hint = 'Output files basename'
+    Top = 74
+    Width = 809
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    TabOrder = 15
+    TextHint = 'Output files basename'
+  end
+  object EdThrld: TLabeledEdit
+    AnchorSideLeft.Control = EdYmax
+    AnchorSideTop.Control = EdYmax
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdYmax
+    AnchorSideRight.Side = asrBottom
+    Left = 175
+    Height = 28
+    Hint = 'Likelihood threshold to select data'
+    Top = 244
+    Width = 100
+    BorderSpacing.Top = 6
+    BorderSpacing.Bottom = 6
+    EditLabel.Height = 20
+    EditLabel.Width = 65
+    EditLabel.Caption = 'Threshold'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    TabOrder = 16
+  end
+  object CBGenerate: TCheckBox
+    AnchorSideLeft.Control = PnlGenerate
+    AnchorSideBottom.Control = PnlGenerate
+    Left = 6
+    Height = 24
+    Top = 610
+    Width = 81
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Top = 6
+    Caption = 'Generate'
+    TabOrder = 19
+    OnChange = CBGenerateChange
+  end
+  object CBZoom: TCheckBox
+    AnchorSideLeft.Control = MmLog
+    AnchorSideBottom.Control = CBGenerate
+    Left = 6
+    Height = 24
+    Hint = 'Zoom on the selected nodes'
+    Top = 580
+    Width = 61
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 6
+    Caption = 'Zoom'
+    TabOrder = 20
+    OnChange = CBZoomChange
+  end
+  object DlgSDF: TOpenDialog
+    Filter = 'SDF|*.SDF;*.sdf'
+    Left = 420
+    Top = 160
+  end
+  object DlgAdd: TOpenDialog
+    Title = 'Add a file - 1 title line, then 1 line per molecule'
+    Filter = 'PRP|*.PRP;*.prp|All|*.*'
+    Left = 320
+    Top = 400
+  end
+  object DlgGTM: TOpenDialog
+    Title = 'Chose a GTM model file (XML)'
+    Filter = 'XML|*.XML;*.xml|All|*.*'
+    Left = 520
+    Top = 10
+  end
+  object DlgSVM: TOpenDialog
+    Title = 'Chose a dataset file (SVM)'
+    Filter = 'SVM|*.SVM;*.svm|All|*.*'
+    Left = 430
+    Top = 60
+  end
+end

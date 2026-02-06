@@ -1,0 +1,114 @@
+object Form3: TForm3
+  Left = 754
+  Height = 123
+  Top = 0
+  Width = 1002
+  Caption = 'GTMapVis'
+  ClientHeight = 123
+  ClientWidth = 1002
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object OpenLandscape: TButton
+    Left = 40
+    Height = 49
+    Top = 24
+    Width = 167
+    Caption = 'Open new landscape'
+    OnClick = OpenLandscapeClick
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 226
+    Height = 30
+    Top = 8
+    Width = 110
+    Caption = 'SMILES'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 226
+    Height = 30
+    Top = 51
+    Width = 110
+    Caption = 'Responsibilities'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Edit1: TEdit
+    Left = 347
+    Height = 21
+    Top = 14
+    Width = 650
+    TabOrder = 3
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 347
+    Height = 21
+    Top = 55
+    Width = 650
+    TabOrder = 4
+    Text = 'Edit2'
+  end
+  object Label1: TLabel
+    Left = 226
+    Height = 15
+    Top = 96
+    Width = 159
+    Caption = 'Relative Resp. > '
+    ParentColor = False
+  end
+  object Edit3: TEdit
+    Left = 385
+    Height = 21
+    Top = 93
+    Width = 43
+    OnEditingDone = Edit3Change
+    TabOrder = 5
+    Text = 'Edit3'
+  end
+  object Button3: TButton
+    Left = 472
+    Height = 30
+    Top = 88
+    Width = 110
+    Caption = 'SHOW '
+    OnClick = Button3Click
+    TabOrder = 6
+  end
+  object Label2: TLabel
+    Left = 592
+    Height = 15
+    Top = 96
+    Width = 245
+    Caption = 'Residents of current node - maximally '
+    ParentColor = False
+  end
+  object Edit4: TEdit
+    Left = 840
+    Height = 21
+    Top = 93
+    Width = 43
+    OnEditingDone = Edit4EditingDone
+    TabOrder = 7
+    Text = 'Edit4'
+  end
+  object SelectLandscape: TOpenPictureDialog
+    Title = 'Select Landscape'
+    Filter = 'Portable Network Graphic (*.png)|*.png|Graphic (*.png;*.xpm;*.bmp;*.cur;*.ico;*.icns;*.jpeg;*.jpg;*.jpe;*.jfif;*.tif;*.tiff;*.gif;*.pbm;*.pgm;*.ppm)|*.png;*.xpm;*.bmp;*.cur;*.ico;*.icns;*.jpeg;*.jpg;*.jpe;*.jfif;*.tif;*.tiff;*.gif;*.pbm;*.pgm;*.ppm|Pixmap (*.xpm)|*.xpm|Bitmaps (*.bmp)|*.bmp|Cursor (*.cur)|*.cur|Icon (*.ico)|*.ico|Mac OS X Icon (*.icns)|*.icns|Joint Picture Expert Group (*.jpeg;*.jpg;*.jpe;*.jfif)|*.jpeg;*.jpg;*.jpe;*.jfif|Tagged Image File Format (*.tif;*.tiff)|*.tif;*.tiff|Graphics Interchange Format (*.gif)|*.gif|Portable PixMap (*.pbm;*.pgm;*.ppm)|*.pbm;*.pgm;*.ppm|All files (*)|*'
+    InitialDir = '.'
+    left = 24
+    top = 82
+  end
+  object SelectRGBA: TOpenDialog
+    Title = 'Open the RGBA file associated with the previous landscape'
+    DefaultExt = '.rgba'
+    left = 58
+    top = 82
+  end
+  object SelectFile: TOpenDialog
+    left = 110
+    top = 88
+  end
+end

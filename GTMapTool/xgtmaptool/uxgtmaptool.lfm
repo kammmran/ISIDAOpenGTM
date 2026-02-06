@@ -1,0 +1,657 @@
+object FGTMapTool: TFGTMapTool
+  Left = 501
+  Height = 694
+  Top = 27
+  Width = 787
+  Caption = 'xGTMapTool'
+  ClientHeight = 694
+  ClientWidth = 787
+  LCLVersion = '2.2.6.0'
+  object BtOK: TButton
+    AnchorSideRight.Control = BtQuit
+    Left = 614
+    Height = 25
+    Top = 648
+    Width = 75
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 2
+    BorderSpacing.InnerBorder = 1
+    Caption = 'OK'
+    OnClick = BtOKClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object BtQuit: TButton
+    AnchorSideRight.Side = asrCenter
+    Left = 691
+    Height = 25
+    Top = 648
+    Width = 75
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 2
+    BorderSpacing.InnerBorder = 1
+    Caption = 'Quit'
+    OnClick = BtQuitClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object BtSVMfile: TButton
+    AnchorSideLeft.Control = EdSVMfile
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EdSVMfile
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 707
+    Height = 25
+    Top = 1
+    Width = 75
+    Anchors = [akTop, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 5
+    BorderSpacing.InnerBorder = 1
+    Caption = '...'
+    OnClick = BtSVMfileClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object EdSVMfile: TEdit
+    AnchorSideLeft.Control = LblModel
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblInputSVM
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Side = asrBottom
+    Left = 264
+    Height = 25
+    Hint = 'Choose an input file in SVM format.'
+    Top = 1
+    Width = 425
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    TextHint = 'Input file (SVM Format)'
+  end
+  object LblInputSVM: TLabel
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 182
+    Height = 16
+    Top = 5
+    Width = 44
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    Caption = 'Input'
+    Font.Height = 14
+    Layout = tlCenter
+    ParentBidiMode = False
+    ParentColor = False
+    ParentFont = False
+    OptimalFill = True
+  end
+  object MLog: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Edn
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BtOK
+    Left = 7
+    Height = 315
+    Top = 326
+    Width = 773
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 5
+    BorderSpacing.Top = 5
+    BorderSpacing.Right = 5
+    BorderSpacing.Bottom = 5
+    BorderSpacing.Around = 2
+    Lines.Strings = (
+      '*********************************************'
+      'Welcome ISIDA/xGTMapTool'
+      ''
+      'a graphical front end to GTM.'
+      ''
+      'H. Gaspar, A. Varnek, D. Horvath,'
+      'P. Sidorov, A. Lin, G. Marcou'
+      ''
+      'Université de Strasbourg'
+      'Faculté de Chimie'
+      ''
+      '2020'
+      '*********************************************'
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+    )
+    ParentFont = False
+    ScrollBars = ssAutoBoth
+    TabOrder = 4
+  end
+  object Lblk: TLabel
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Edk
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edk
+    Left = 8
+    Height = 25
+    Top = 151
+    Width = 172
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    Caption = 'Number of samples'
+    Font.Height = 14
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Lblm: TLabel
+    AnchorSideTop.Control = Edm
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edm
+    Left = 27
+    Height = 25
+    Top = 186
+    Width = 153
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    Caption = 'Number of traits'
+    Font.Height = 14
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Lblw: TLabel
+    AnchorSideTop.Control = Edw
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edw
+    Left = 32
+    Height = 25
+    Top = 221
+    Width = 148
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    Caption = 'RBF width'
+    Font.Height = 14
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Lbll: TLabel
+    AnchorSideTop.Control = Edl
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edl
+    Left = 9
+    Height = 25
+    Top = 256
+    Width = 171
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    Caption = 'Regularization'
+    Font.Height = 14
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Edk: TEdit
+    AnchorSideTop.Control = CBSaveInfo
+    AnchorSideTop.Side = asrBottom
+    Left = 190
+    Height = 25
+    Hint = 'Number of samples on the manifold.'
+    Top = 151
+    Width = 80
+    AutoSize = False
+    BorderSpacing.Around = 10
+    NumbersOnly = True
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+    Text = '0'
+  end
+  object Edm: TEdit
+    AnchorSideTop.Control = Edk
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Edk
+    AnchorSideRight.Side = asrCenter
+    Left = 190
+    Height = 25
+    Hint = 'Number of RBF attached to the manifold.'
+    Top = 186
+    Width = 80
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+    Text = '1'
+  end
+  object Edw: TEdit
+    AnchorSideTop.Control = Edm
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Edm
+    AnchorSideRight.Side = asrCenter
+    Left = 190
+    Height = 25
+    Hint = 'Width of the RBF attached to the manifold.  The default value (-1) sets the width to enclose O(100) sample points around any RBF.'
+    Top = 221
+    Width = 80
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 7
+    Text = '-1'
+  end
+  object Edl: TEdit
+    AnchorSideTop.Control = Edw
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Edw
+    AnchorSideRight.Side = asrCenter
+    Left = 190
+    Height = 25
+    Hint = 'Regularization coefficient. The default value (-1) sets the regularization so the prior on the weights of the GTM following a standard normal distribution.'
+    Top = 256
+    Width = 80
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+    Text = '-1'
+  end
+  object LblOut: TLabel
+    AnchorSideLeft.Control = LblInputSVM
+    AnchorSideTop.Control = LblInputSVM
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdOut
+    Left = 182
+    Height = 16
+    Top = 26
+    Width = 51
+    AutoSize = False
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    Caption = 'Output'
+    Font.Height = 13
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+  end
+  object EdOut: TEdit
+    AnchorSideLeft.Control = EdSVMfile
+    AnchorSideTop.Control = LblOut
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = EdSVMfile
+    AnchorSideRight.Side = asrBottom
+    Left = 264
+    Height = 25
+    Hint = 'The output file names will start with the value of this parameter. This also set the location of the output files. By defaut, it is set to the input file name without extension.'
+    Top = 22
+    Width = 425
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+    TextHint = 'Output base name'
+  end
+  object BtOut: TButton
+    AnchorSideLeft.Control = BtSVMfile
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = EdOut
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = BtSVMfile
+    AnchorSideRight.Side = asrCenter
+    Left = 707
+    Height = 25
+    Top = 22
+    Width = 75
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 5
+    Caption = '...'
+    OnClick = BtOutClick
+    ParentFont = False
+    TabOrder = 10
+  end
+  object Edn: TEdit
+    AnchorSideTop.Control = Edl
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Edl
+    AnchorSideRight.Side = asrCenter
+    Left = 190
+    Height = 25
+    Hint = 'Regularization coefficient. The default value (-1) sets the regularization so the prior on the weights of the GTM following a standard normal distribution.'
+    Top = 291
+    Width = 80
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 11
+    Text = '100'
+  end
+  object Lbln: TLabel
+    AnchorSideTop.Control = Edn
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edn
+    Left = 16
+    Height = 25
+    Top = 291
+    Width = 164
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    Caption = 'Max. number of iterations'
+    Font.Height = 14
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object CBPreprocess: TComboBox
+    AnchorSideLeft.Control = Edk
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Lblk
+    Left = 280
+    Height = 34
+    Top = 151
+    Width = 238
+    ItemHeight = 0
+    Items.Strings = (
+      'No pre-processing'
+      'Standardize'
+      'Center'
+      'Normalize within [-1,1]'
+      'Normalize within [-1,1] then center'
+    )
+    ParentFont = False
+    TabOrder = 12
+    Text = 'Select a pre-processing...'
+  end
+  object LblModel: TLabel
+    AnchorSideLeft.Control = LblInputSVM
+    AnchorSideTop.Control = LblOut
+    AnchorSideTop.Side = asrBottom
+    Left = 182
+    Height = 16
+    Top = 47
+    Width = 77
+    AutoSize = False
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    Caption = 'Model (XML)'
+    Enabled = False
+    Font.Height = 13
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+    OptimalFill = True
+  end
+  object EdModel: TEdit
+    AnchorSideLeft.Control = EdSVMfile
+    AnchorSideTop.Control = LblModel
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = EdSVMfile
+    AnchorSideRight.Side = asrBottom
+    Left = 264
+    Height = 25
+    Hint = 'This is the name of the model file (.XML) to use with your data.'
+    Top = 43
+    Width = 425
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    Enabled = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 13
+    TextHint = 'File name of the model'
+  end
+  object BtModel: TButton
+    AnchorSideLeft.Control = BtSVMfile
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = EdModel
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = BtSVMfile
+    AnchorSideRight.Side = asrCenter
+    Left = 706
+    Height = 25
+    Top = 43
+    Width = 75
+    Anchors = [akTop, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 5
+    Caption = '...'
+    Enabled = False
+    OnClick = BtModelClick
+    ParentFont = False
+    TabOrder = 14
+  end
+  object RGTrainUse: TRadioGroup
+    Left = 8
+    Height = 105
+    Top = 8
+    Width = 152
+    AutoFill = True
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 103
+    ClientWidth = 150
+    Font.Height = 14
+    ItemIndex = 0
+    Items.Strings = (
+      'Train model'
+      'Use model'
+    )
+    OnSelectionChanged = RGTrainUseSelectionChanged
+    ParentFont = False
+    TabOrder = 15
+  end
+  object CBSaveInfo: TCheckBox
+    AnchorSideLeft.Control = RGTrainUse
+    AnchorSideTop.Control = RGTrainUse
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 23
+    Top = 118
+    Width = 163
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    Caption = 'Save full informations'
+    Enabled = False
+    Font.Height = 14
+    ParentFont = False
+    TabOrder = 16
+  end
+  object LblConv: TLabel
+    AnchorSideLeft.Control = Edn
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Lbln
+    AnchorSideTop.Side = asrCenter
+    Left = 280
+    Height = 17
+    Top = 295
+    Width = 225
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 5
+    Caption = 'Convergence: likelyhood difference'
+    Font.Height = 14
+    ParentColor = False
+    ParentFont = False
+  end
+  object EdConv: TEdit
+    AnchorSideLeft.Control = LblConv
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblConv
+    AnchorSideTop.Side = asrCenter
+    Left = 510
+    Height = 34
+    Top = 286
+    Width = 80
+    BorderSpacing.Left = 5
+    ParentFont = False
+    TabOrder = 17
+    Text = '0.001'
+  end
+  object CBScaleInit: TComboBox
+    AnchorSideLeft.Control = LblScaleInit
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblScaleInit
+    AnchorSideTop.Side = asrCenter
+    Left = 377
+    Height = 34
+    Hint = 'The initial extension of the manifold.'#10'''Standard'': the manifold is extended according to each principal component variance.'#10'''Extended'': the manifold is extended to cover all instances in the dataset'#10'''Custom'': a multiplication factor applied to the Standard definition. '
+    Top = 186
+    Width = 100
+    BorderSpacing.Left = 10
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'Standard'
+      'Extended'
+      'Custom'
+    )
+    OnChange = CBScaleInitChange
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 18
+    Text = 'Standard'
+  end
+  object LblScaleInit: TLabel
+    AnchorSideLeft.Control = CBPreprocess
+    AnchorSideTop.Control = CBPreprocess
+    AnchorSideTop.Side = asrBottom
+    Left = 280
+    Height = 17
+    Top = 195
+    Width = 87
+    BorderSpacing.Top = 10
+    Caption = 'Initial scaling'
+    ParentColor = False
+    ParentFont = False
+  end
+  object FSEScaleInit: TFloatSpinEditEx
+    AnchorSideLeft.Control = CBScaleInit
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = CBScaleInit
+    AnchorSideTop.Side = asrCenter
+    Left = 487
+    Height = 34
+    Top = 186
+    Width = 103
+    BorderSpacing.Left = 10
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 19
+    Visible = False
+    Value = 1
+  end
+  object LblPC123: TLabel
+    AnchorSideLeft.Control = LblScaleInit
+    AnchorSideTop.Control = Lblw
+    AnchorSideTop.Side = asrCenter
+    Left = 280
+    Height = 17
+    Top = 225
+    Width = 123
+    Caption = 'Precomputed PCA'
+    ParentColor = False
+    ParentFont = False
+  end
+  object EdPC123: TEdit
+    AnchorSideLeft.Control = LblPC123
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblPC123
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = EdSVMfile
+    AnchorSideRight.Side = asrBottom
+    Left = 413
+    Height = 34
+    Hint = 'Precomputed three first PCA in .mat format.'#10'First an last line are comments'#10'Second line are eigenvalues.'#10'Other lines are (unit) eigenvectors.'
+    Top = 216
+    Width = 276
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 10
+    ParentFont = False
+    TabOrder = 20
+    TextHint = 'PC123.mat file'
+  end
+  object BtPC123: TButton
+    AnchorSideLeft.Control = EdPC123
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblPC123
+    AnchorSideTop.Side = asrCenter
+    Left = 699
+    Height = 25
+    Top = 221
+    Width = 75
+    BorderSpacing.Left = 10
+    Caption = '...'
+    OnClick = BtPC123Click
+    ParentFont = False
+    TabOrder = 21
+  end
+  object ODlgSVMfile: TOpenDialog
+    Title = 'Ouvrir un fichier SVM existant'
+    Filter = 'SVM|*.svm;*.SVM|All|*'
+    Left = 256
+    Top = 8
+  end
+  object ODlgOut: TSelectDirectoryDialog
+    Title = 'Choisir un nom de base'
+    Left = 328
+    Top = 32
+  end
+  object ODlgModel: TOpenDialog
+    Title = 'Choisir un fichier XML'
+    FileName = '/Users/marcou/Documents/CS3-2018/FDB'
+    Filter = 'Model|*.xml;*.XML|All|*.*'
+    InitialDir = '/Users/marcou/Documents/CS3-2018/'
+    Left = 392
+    Top = 64
+  end
+  object ODPC123: TOpenDialog
+    Filter = 'PCA file|*PC123.mat|All|*'
+    Left = 542
+    Top = 226
+  end
+end

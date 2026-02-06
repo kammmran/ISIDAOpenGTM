@@ -1,0 +1,1358 @@
+object FrmxGTMLandscape: TFrmxGTMLandscape
+  Left = 421
+  Height = 925
+  Top = 48
+  Width = 1461
+  HorzScrollBar.Page = 738
+  VertScrollBar.Page = 894
+  AutoScroll = True
+  Caption = 'xGTMLandscape'
+  ClientHeight = 925
+  ClientWidth = 1461
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  SnapOptions.SnapToMonitor = True
+  LCLVersion = '3.4.0.0'
+  object BtQuit: TButton
+    AnchorSideTop.Control = CBColorspace
+    AnchorSideBottom.Control = MmLog
+    AnchorSideBottom.Side = asrBottom
+    Left = 568
+    Height = 31
+    Top = 884
+    Width = 75
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Top = 32
+    Caption = 'Quit'
+    ParentFont = False
+    TabOrder = 0
+    OnClick = BtQuitClick
+  end
+  object BtOK: TButton
+    AnchorSideTop.Control = CBColorspace
+    AnchorSideBottom.Control = MmLog
+    AnchorSideBottom.Side = asrBottom
+    Left = 480
+    Height = 31
+    Top = 884
+    Width = 75
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Top = 32
+    Caption = 'OK'
+    ParentFont = False
+    TabOrder = 1
+    OnClick = BtOKClick
+  end
+  object MmLog: TMemo
+    AnchorSideLeft.Control = ChScale
+    AnchorSideTop.Control = ChScale
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ChScale
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 653
+    Height = 85
+    Top = 830
+    Width = 798
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 10
+    Lines.Strings = (
+      'Welcome to xGTMLandscape'
+      'A tool to visualize your classification and regression GTM models'
+      'G. Marcou - Univeristé de Strasbourg - 2024'
+      ''
+    )
+    ParentFont = False
+    ScrollBars = ssAutoBoth
+    TabOrder = 2
+  end
+  object ChGTMLatent: TChart
+    AnchorSideLeft.Control = ChPrj
+    AnchorSideTop.Control = ChPrj
+    AnchorSideRight.Control = ChPrj
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ChPrj
+    AnchorSideBottom.Side = asrBottom
+    Left = 653
+    Height = 580
+    Top = 196
+    Width = 798
+    AxisList = <    
+      item
+        Grid.Visible = False
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Range.Max = 1
+        Range.UseMax = True
+        Range.UseMin = True
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Grid.Visible = False
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = clNone
+    Extent.UseXMax = True
+    Extent.UseXMin = True
+    Extent.UseYMax = True
+    Extent.UseYMin = True
+    Extent.XMax = 1
+    Extent.XMin = -1
+    Extent.YMax = 1
+    Extent.YMin = -1
+    ExtentSizeLimit.UseXMax = True
+    ExtentSizeLimit.UseXMin = True
+    ExtentSizeLimit.UseYMax = True
+    ExtentSizeLimit.UseYMin = True
+    ExtentSizeLimit.XMax = 1
+    ExtentSizeLimit.XMin = -1
+    ExtentSizeLimit.YMax = 1
+    ExtentSizeLimit.YMin = -1
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Margins.Left = 0
+    Margins.Top = 0
+    Margins.Right = 0
+    Margins.Bottom = 0
+    Proportional = True
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    OnAfterDraw = ChGTMLatentAfterDraw
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Color = clNone
+    object LBSamples: TBubbleSeries
+      Active = False
+      Title = 'Responsibilities'
+      Source = LCSSamples
+    end
+    object CMLandscape: TColorMapSeries
+      Extent.UseXMax = True
+      Extent.UseXMin = True
+      Extent.UseYMax = True
+      Extent.UseYMin = True
+      Extent.XMax = 1
+      Extent.XMin = -1
+      Extent.YMax = 1
+      Extent.YMin = -1
+      BuiltInPalette = cmpCold
+      Interpolate = True
+      StepX = 1
+      StepY = 1
+      OnCalculate = CMLandscapeCalculate
+    end
+  end
+  object BtLandscapeFile: TButton
+    AnchorSideLeft.Control = BtGTM
+    AnchorSideTop.Control = BtGTM
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Side = asrBottom
+    Left = 442
+    Height = 25
+    Top = 125
+    Width = 75
+    BorderSpacing.Top = 50
+    Caption = '...'
+    ParentFont = False
+    TabOrder = 4
+    OnClick = BtLandscapeFileClick
+  end
+  object TglBxLog: TToggleBox
+    AnchorSideLeft.Control = BtOK
+    AnchorSideRight.Control = BtQuit
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = CBLandscapes
+    Left = 480
+    Height = 24
+    Hint = 'Log scale or not'
+    Top = 798
+    Width = 163
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    Caption = 'Log scale'
+    DoubleBuffered = False
+    ParentDoubleBuffered = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+    OnChange = TglBxLogChange
+  end
+  object CBLandscapes: TComboBox
+    Left = 440
+    Height = 23
+    Hint = 'Select a landscape to plot'
+    Top = 827
+    Width = 203
+    ItemHeight = 15
+    Items.Strings = (
+      ''
+    )
+    ParentFont = False
+    TabOrder = 6
+    Text = 'Select a landscape to plot'
+    OnSelect = CBLandscapesSelect
+  end
+  object BtProjections: TButton
+    AnchorSideLeft.Control = BtResp
+    AnchorSideTop.Control = BtResp
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BtResp
+    AnchorSideRight.Side = asrBottom
+    Left = 442
+    Height = 25
+    Top = 350
+    Width = 75
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 50
+    Caption = '...'
+    ParentFont = False
+    TabOrder = 7
+    OnClick = BtProjectionsClick
+  end
+  object ChScale: TChart
+    AnchorSideLeft.Control = ChGTMLatent
+    AnchorSideTop.Control = ChGTMLatent
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ChGTMLatent
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = MmLog
+    Left = 653
+    Height = 49
+    Top = 776
+    Width = 798
+    AllowZoom = False
+    AxisList = <    
+      item
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Range.Max = 1
+        Range.Min = -1
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = clWhite
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    OnAfterDraw = ChScaleAfterDraw
+    Anchors = [akLeft, akRight, akBottom]
+    Color = clWhite
+    object CMGradient: TColorMapSeries
+      Extent.UseXMax = True
+      Extent.UseXMin = True
+      Extent.XMax = 1
+      Extent.XMin = -1
+      AxisIndexX = 0
+      BuiltInPalette = cmpCold
+      Interpolate = True
+      StepX = 1
+      StepY = 1
+      OnCalculate = CMGradientCalculate
+    end
+  end
+  object BtSDF: TButton
+    AnchorSideLeft.Control = BtProjections
+    AnchorSideTop.Control = BtProjections
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BtProjections
+    AnchorSideRight.Side = asrBottom
+    Left = 442
+    Height = 24
+    Top = 425
+    Width = 75
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 50
+    Caption = '...'
+    ParentFont = False
+    TabOrder = 9
+    OnClick = BtSDFClick
+  end
+  object ImageMol: TImage
+    Left = 10
+    Height = 400
+    Top = 482
+    Width = 422
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 10
+  end
+  object LblMolRec: TLabel
+    AnchorSideLeft.Control = BitBtnFirst
+    AnchorSideBottom.Control = BitBtnFirst
+    Left = 10
+    Height = 15
+    Top = 841
+    Width = 103
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 20
+    Caption = 'Looking at Record:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object MaskEditGoto: TMaskEdit
+    AnchorSideLeft.Control = BitBtnLeft
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideBottom.Control = BitBtnGoTo
+    Left = 180
+    Height = 24
+    Hint = 'Go to Record'
+    Top = 862
+    Width = 84
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 1
+    BorderSpacing.Bottom = 5
+    Enabled = False
+    EnableSets = False
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    MaxLength = 6
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 10
+    Visible = False
+    EditMask = '999999;0; '
+    SpaceChar = ' '
+  end
+  object BitBtnFirst: TBitBtn
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 10
+    Height = 24
+    Hint = 'First Mol'
+    Top = 876
+    Width = 84
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 10
+    BorderSpacing.Bottom = 25
+    Enabled = False
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      0400000000000001000000000000000000001000000010000000000000000000
+      80000080000000808000800000008000800080800000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333333333333333333333333333330333333333333333333333330033333003
+      3333333333333333333333003333000333333333333333333333330033300003
+      3333333333333333333333003300000333333333333333333333330030000003
+      3333333333333333333333000000000333333333333333333333330030000003
+      3333333333333333333333003300000333333333333333333333330033300003
+      3333333333333333333333003333000333333333333333333333330033333003
+      3333333333333333333333333333330333333333333333333333333333333333
+      3333333333333333333333333333333333333333333333333333
+    }
+    NumGlyphs = 2
+    OnClick = BitBtnFirstClick
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 11
+    Visible = False
+  end
+  object BitBtnGoTo: TBitBtn
+    AnchorSideLeft.Control = BitBtnLeft
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 180
+    Height = 24
+    Hint = 'Go to Record'
+    Top = 891
+    Width = 84
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 1
+    BorderSpacing.Bottom = 10
+    Enabled = False
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      0400000000000001000000000000000000001000000010000000000000000000
+      80000080000000808000800000008000800080800000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333333333333333333333333333330000033333333333333333333333333333
+      3333333333333333333333330333333333333333333333333333333300333300
+      0003333333333333333333330003333333333333333333333333333300003333
+      3333333333333333333333330000030000033333333333333333333300003333
+      3333333333333333333333330003333333333333333333333333333300333300
+      0003333333333333333333330333333333333333333333333333333333333333
+      3333333333333333333333333333330000033333333333333333333333333333
+      3333333333333333333333333333333333333333333333333333
+    }
+    NumGlyphs = 2
+    OnClick = BitBtnGoToClick
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 12
+    Visible = False
+  end
+  object BitBtnRight: TBitBtn
+    AnchorSideLeft.Control = BitBtnGoTo
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 265
+    Height = 24
+    Hint = 'Next Mol'
+    Top = 876
+    Width = 84
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 1
+    BorderSpacing.Bottom = 25
+    Enabled = False
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      0400000000000001000000000000000000001000000010000000000000000000
+      80000080000000808000800000008000800080800000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333333333333333333333330333333333333333333333333333333300333333
+      3333333333333333333333330003333333333333333333333333333300003333
+      3333333333333333333333330000033333333333333333333333333300000033
+      3333333333333333333333330000000333333333333333333333333300000033
+      3333333333333333333333330000033333333333333333333333333300003333
+      3333333333333333333333330003333333333333333333333333333300333333
+      3333333333333333333333330333333333333333333333333333333333333333
+      3333333333333333333333333333333333333333333333333333
+    }
+    NumGlyphs = 2
+    OnClick = BitBtnRightClick
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 13
+    Visible = False
+  end
+  object BitBtnLast: TBitBtn
+    AnchorSideLeft.Control = BitBtnRight
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 350
+    Height = 24
+    Hint = 'Last Mol'
+    Top = 876
+    Width = 84
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 1
+    BorderSpacing.Bottom = 25
+    Enabled = False
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      0400000000000001000000000000000000001000000010000000000000000000
+      80000080000000808000800000008000800080800000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333333333333333333333330333333333333333333333333333333300333330
+      0333333333333333333333330003333003333333333333333333333300003330
+      0333333333333333333333330000033003333333333333333333333300000030
+      0333333333333333333333330000000003333333333333333333333300000030
+      0333333333333333333333330000033003333333333333333333333300003330
+      0333333333333333333333330003333003333333333333333333333300333330
+      0333333333333333333333330333333333333333333333333333333333333333
+      3333333333333333333333333333333333333333333333333333
+    }
+    NumGlyphs = 2
+    OnClick = BitBtnLastClick
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 14
+    Visible = False
+  end
+  object CBProp: TComboBox
+    AnchorSideTop.Control = LblMolRec
+    AnchorSideRight.Control = BitBtnLast
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = LblMolRec
+    AnchorSideBottom.Side = asrBottom
+    Left = 334
+    Height = 23
+    Hint = 'Choose the SDF field to color the plots according to the field value.'
+    Top = 841
+    Width = 100
+    Anchors = [akTop, akRight]
+    ItemHeight = 15
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 15
+    Text = 'SDF Field'
+    OnChange = CBPropChange
+  end
+  object BitBtnLeft: TBitBtn
+    AnchorSideLeft.Control = BitBtnFirst
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 95
+    Height = 24
+    Hint = 'Previous Mol'
+    Top = 876
+    Width = 84
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 1
+    BorderSpacing.Bottom = 25
+    Enabled = False
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      0400000000000001000000000000000000001000000010000000000000000000
+      80000080000000808000800000008000800080800000C0C0C000808080000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333333333333333333333333333330333333333333333333333333333333003
+      3333333333333333333333333333000333333333333333333333333333300003
+      3333333333333333333333333300000333333333333333333333333330000003
+      3333333333333333333333330000000333333333333333333333333330000003
+      3333333333333333333333333300000333333333333333333333333333300003
+      3333333333333333333333333333000333333333333333333333333333333003
+      3333333333333333333333333333330333333333333333333333333333333333
+      3333333333333333333333333333333333333333333333333333
+    }
+    NumGlyphs = 2
+    OnClick = BitBtnLeftClick
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 16
+    Visible = False
+  end
+  object BtSavePlot: TButton
+    AnchorSideLeft.Control = BtOK
+    AnchorSideRight.Control = BtQuit
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = TglBxPrj
+    Left = 480
+    Height = 24
+    Top = 740
+    Width = 163
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    Caption = 'Save plot'
+    ParentFont = False
+    TabOrder = 17
+    OnClick = BtSavePlotClick
+  end
+  object TglBxPrj: TToggleBox
+    AnchorSideLeft.Control = BtOK
+    AnchorSideRight.Control = BtQuit
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = TglBxLog
+    Left = 480
+    Height = 24
+    Hint = 'Show/hide projections of molecules'
+    Top = 769
+    Width = 163
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Top = 5
+    BorderSpacing.Bottom = 5
+    Caption = 'Hide projections'
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 18
+    OnChange = TglBxPrjChange
+  end
+  object ChPrj: TChart
+    AnchorSideLeft.Control = BtQuit
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblEdPdata
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ChScale
+    Left = 653
+    Height = 580
+    Top = 196
+    Width = 798
+    AxisList = <    
+      item
+        Grid.Visible = False
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Grid.Visible = False
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = clNone
+    Extent.UseXMax = True
+    Extent.UseXMin = True
+    Extent.UseYMax = True
+    Extent.UseYMin = True
+    Extent.XMax = 1
+    Extent.XMin = -1
+    Extent.YMax = 1
+    Extent.YMin = -1
+    ExtentSizeLimit.UseXMax = True
+    ExtentSizeLimit.UseXMin = True
+    ExtentSizeLimit.UseYMax = True
+    ExtentSizeLimit.UseYMin = True
+    ExtentSizeLimit.XMax = 1
+    ExtentSizeLimit.XMin = -1
+    ExtentSizeLimit.YMax = 1
+    ExtentSizeLimit.YMin = -1
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Margins.Left = 0
+    Margins.Top = 0
+    Margins.Right = 0
+    Margins.Bottom = 0
+    Proportional = True
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = CTSMols
+    OnBeforeCustomDrawBackWall = ChPrjBeforeCustomDrawBackWall
+    OnExtentChanged = ChPrjExtentChanged
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 10
+    BorderSpacing.Right = 10
+    Color = clNone
+    OnResize = ChPrjResize
+    object LSPrj: TLineSeries
+      LineType = ltNone
+      Pointer.Visible = True
+      ShowPoints = True
+      Source = LCSMols
+    end
+    object LSEmphasize: TLineSeries
+      Active = False
+      ZPosition = 1
+      LinePen.Color = clBlue
+      LineType = ltNone
+      Pointer.Brush.Color = clBlue
+      Pointer.HorizSize = 8
+      Pointer.OverrideColor = [ocBrush, ocPen]
+      Pointer.Style = psCircle
+      Pointer.VertSize = 8
+      Pointer.Visible = True
+      ShowPoints = True
+      Source = LCSEmphasize
+    end
+    object LSZoomTag1: TLineSeries
+      Active = False
+      LinePen.Color = clMoneyGreen
+      Pointer.HorizSize = 10
+      Pointer.Style = psCross
+      Pointer.VertSize = 10
+      Pointer.Visible = True
+      ShowPoints = True
+    end
+  end
+  object CBColorspace: TComboBox
+    AnchorSideLeft.Control = CBLandscapes
+    AnchorSideTop.Control = CBLandscapes
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = CBLandscapes
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BtQuit
+    Left = 440
+    Height = 23
+    Hint = 'Select a colorspace for your landscape. Default value is Cold.'
+    Top = 852
+    Width = 203
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 2
+    ItemHeight = 15
+    Items.Strings = (
+      'Cold'
+      'Hot'
+      'Rainbow'
+      'Monochrome'
+      'Viridis'
+      'Plasma'
+      'Inferno'
+      'Custom'
+    )
+    TabOrder = 20
+    Text = 'Select a colorspace'
+    OnSelect = CBColorspaceSelect
+  end
+  object EdColmin: TEdit
+    AnchorSideLeft.Control = EdColmax
+    AnchorSideRight.Control = CBLandscapes
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdColmax
+    Left = 501
+    Height = 23
+    Top = 684
+    Width = 142
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 5
+    TabOrder = 21
+    Visible = False
+    OnEditingDone = EdColminEditingDone
+  end
+  object EdColmax: TEdit
+    AnchorSideLeft.Control = LblColmax
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = CBLandscapes
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = BtSavePlot
+    Left = 501
+    Height = 23
+    Top = 712
+    Width = 142
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Left = 5
+    BorderSpacing.Bottom = 5
+    TabOrder = 22
+    Visible = False
+    OnEditingDone = EdColmaxEditingDone
+  end
+  object LblColmin: TLabel
+    AnchorSideLeft.Control = CBLandscapes
+    AnchorSideTop.Control = EdColmin
+    AnchorSideTop.Side = asrCenter
+    Left = 440
+    Height = 15
+    Top = 688
+    Width = 54
+    Caption = 'Min. color'
+    ParentColor = False
+    Visible = False
+  end
+  object LblColmax: TLabel
+    AnchorSideLeft.Control = CBLandscapes
+    AnchorSideTop.Control = EdColmax
+    AnchorSideTop.Side = asrCenter
+    Left = 440
+    Height = 15
+    Top = 716
+    Width = 56
+    Caption = 'Max. color'
+    ParentColor = False
+    Visible = False
+  end
+  object EdLandscapeFile: TLabeledEdit
+    AnchorSideLeft.Control = ImageMol
+    AnchorSideTop.Control = BtLandscapeFile
+    AnchorSideRight.Control = EdGTM
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 23
+    Hint = 'The file name of the landscape (*XML)'
+    Top = 125
+    Width = 422
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 15
+    EditLabel.Width = 422
+    EditLabel.Caption = 'GTM landscape model file (.xml):'
+    EditLabel.ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 23
+    TextHint = 'Enter the file name of the landscape (xml)'
+  end
+  object EdProjections: TLabeledEdit
+    AnchorSideLeft.Control = EdLandscapeFile
+    AnchorSideTop.Control = BtProjections
+    AnchorSideRight.Control = EdLandscapeFile
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 23
+    Hint = 'The file name of the projections (*Prj.mat)'
+    Top = 350
+    Width = 422
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 15
+    EditLabel.Width = 422
+    EditLabel.Caption = 'Projection file (Prj.mat):'
+    EditLabel.ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 24
+    TextHint = 'Enter the file name of the projections (Prj.mat)'
+  end
+  object EdSDF: TLabeledEdit
+    AnchorSideLeft.Control = EdLandscapeFile
+    AnchorSideTop.Control = BtSDF
+    AnchorSideRight.Control = EdLandscapeFile
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 23
+    Hint = 'Enter the name of the chemical structures file (SDF)'
+    Top = 425
+    Width = 422
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 15
+    EditLabel.Width = 422
+    EditLabel.Caption = 'Chemical structures file (SDF):'
+    EditLabel.ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 25
+    TextHint = 'Choose an SDF file...'
+  end
+  object EdResp: TLabeledEdit
+    AnchorSideLeft.Control = EdLandscapeFile
+    AnchorSideTop.Control = BtResp
+    AnchorSideRight.Control = EdLandscapeFile
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 23
+    Hint = 'The file name of the projections (*Prj.mat)'
+    Top = 275
+    Width = 422
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 15
+    EditLabel.Width = 422
+    EditLabel.Caption = 'Responsibility file (R.svm):'
+    EditLabel.ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 26
+    TextHint = 'Enter the file name of the responsibilities (R.svm)'
+  end
+  object BtResp: TButton
+    AnchorSideLeft.Control = BtLandscapeFile
+    AnchorSideTop.Control = BtSVM
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BtLandscapeFile
+    AnchorSideRight.Side = asrBottom
+    Left = 442
+    Height = 25
+    Top = 275
+    Width = 75
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 50
+    Caption = '...'
+    ParentFont = False
+    TabOrder = 27
+    OnClick = BtRespClick
+  end
+  object ChCumRsp: TChart
+    AnchorSideLeft.Control = MmLog
+    AnchorSideRight.Control = MmLog
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = LblEdPdata
+    Cursor = crCross
+    Left = 653
+    Height = 156
+    Hint = 'Cumulated responsibility plot. Click to setup a minimum responsibility threshold.'
+    Top = 4
+    Width = 798
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Range.Max = 1
+        Range.UseMax = True
+        Range.UseMin = True
+        Title.LabelFont.Orientation = 900
+        Title.Visible = True
+        Title.Caption = 'Population (Rmax>r)'
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Range.Max = 1
+        Range.UseMax = True
+        Range.UseMin = True
+        Title.Visible = True
+        Title.Caption = 'Responsibility threshold value (r)'
+        Title.LabelBrush.Style = bsClear
+      end>
+    Title.Text.Strings = (
+      'Cumulative Distribution Function of max. responsibilities'
+    )
+    Title.Visible = True
+    Toolset = ChToolCumRsp
+    Anchors = [akLeft, akRight]
+    ParentShowHint = False
+    ShowHint = True
+    object ChCumRspLS1: TLineSeries
+      Active = False
+      Title = 'Initial distribution'
+      Source = LSRcum
+    end
+    object ChOrgRspLS1: TLineSeries
+      Source = LSRorg
+    end
+  end
+  object LblEdCumRsp: TLabeledEdit
+    AnchorSideTop.Control = LblEdPdata
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = LblEdPdata
+    Left = 1167
+    Height = 23
+    Hint = 'Selected cumulated responsibility'
+    Top = 173
+    Width = 104
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 100
+    EditLabel.Height = 15
+    EditLabel.Width = 60
+    EditLabel.Caption = 'Cum. Resp.'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 29
+    TextHint = '0.0'
+  end
+  object LblEdPdata: TLabeledEdit
+    AnchorSideLeft.Control = LblEdCumRsp
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblEdCumRsp
+    AnchorSideRight.Control = MmLog
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = MmLog
+    Left = 1371
+    Height = 23
+    Hint = '% of selected dataset.'
+    Top = 173
+    Width = 80
+    Anchors = [akRight]
+    EditLabel.Height = 15
+    EditLabel.Width = 44
+    EditLabel.Caption = 'frac. top'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    TabOrder = 30
+    TextHint = '0.0'
+  end
+  object BtUpdate: TButton
+    AnchorSideLeft.Control = ChCumRsp
+    AnchorSideRight.Control = LblEdCumRsp
+    AnchorSideBottom.Control = LblEdCumRsp
+    AnchorSideBottom.Side = asrBottom
+    Left = 653
+    Height = 25
+    Top = 171
+    Width = 75
+    Anchors = [akLeft, akBottom]
+    Caption = 'Update'
+    TabOrder = 31
+    OnClick = BtUpdateClick
+  end
+  object LblEdRsp: TLabeledEdit
+    AnchorSideTop.Control = LblEdPdata
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = LblEdCumRsp
+    Left = 963
+    Height = 23
+    Hint = 'Selected cumulated responsibility'
+    Top = 173
+    Width = 104
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 100
+    EditLabel.Height = 15
+    EditLabel.Width = 59
+    EditLabel.Caption = 'Resp. Value'
+    EditLabel.ParentColor = False
+    LabelPosition = lpLeft
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 32
+    TextHint = '0.0'
+  end
+  object EdtTop: TLabeledEdit
+    AnchorSideRight.Control = EdtLeft
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdtLeft
+    Left = 563
+    Height = 23
+    Top = 582
+    Width = 80
+    Anchors = [akRight, akBottom]
+    EditLabel.Height = 15
+    EditLabel.Width = 19
+    EditLabel.Caption = 'Top'
+    EditLabel.ParentColor = False
+    Enabled = False
+    LabelPosition = lpLeft
+    TabOrder = 33
+    Text = '0'
+    Visible = False
+  end
+  object EdtLeft: TLabeledEdit
+    AnchorSideRight.Control = EdtBottom
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdtBottom
+    Left = 563
+    Height = 23
+    Top = 605
+    Width = 80
+    Anchors = [akRight, akBottom]
+    EditLabel.Height = 15
+    EditLabel.Width = 20
+    EditLabel.Caption = 'Left'
+    EditLabel.ParentColor = False
+    Enabled = False
+    LabelPosition = lpLeft
+    TabOrder = 34
+    Text = '0'
+    Visible = False
+  end
+  object EdtBottom: TLabeledEdit
+    AnchorSideRight.Control = EdtRight
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdtRight
+    Left = 563
+    Height = 23
+    Top = 628
+    Width = 80
+    Anchors = [akRight, akBottom]
+    EditLabel.Height = 15
+    EditLabel.Width = 40
+    EditLabel.Caption = 'Bottom'
+    EditLabel.ParentColor = False
+    Enabled = False
+    LabelPosition = lpLeft
+    TabOrder = 35
+    Text = '0'
+    Visible = False
+  end
+  object EdtRight: TLabeledEdit
+    AnchorSideRight.Control = EdColmin
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdColmin
+    Left = 563
+    Height = 23
+    Top = 651
+    Width = 80
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Bottom = 10
+    EditLabel.Height = 15
+    EditLabel.Width = 28
+    EditLabel.Caption = 'Right'
+    EditLabel.ParentColor = False
+    Enabled = False
+    LabelPosition = lpLeft
+    TabOrder = 36
+    Text = '0'
+    Visible = False
+  end
+  object LblZoomZone: TLabel
+    AnchorSideTop.Control = TglBxZoomBox
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = EdtBottom
+    Left = 508
+    Height = 15
+    Top = 562
+    Width = 55
+    Anchors = [akTop, akRight]
+    Caption = 'Zoom box'
+    ParentColor = False
+    Visible = False
+  end
+  object TglBxZoomBox: TToggleBox
+    AnchorSideLeft.Control = EdtTop
+    AnchorSideRight.Control = EdtTop
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = EdtTop
+    Left = 563
+    Height = 25
+    Top = 557
+    Width = 80
+    Anchors = [akLeft, akRight, akBottom]
+    Caption = 'Show box'
+    TabOrder = 37
+    Visible = False
+    OnChange = TglBxZoomBoxChange
+  end
+  object BtZoom: TButton
+    AnchorSideLeft.Control = LblZoomZone
+    AnchorSideRight.Control = TglBxZoomBox
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = TglBxZoomBox
+    Left = 508
+    Height = 25
+    Hint = 'Compute a zoom on the selected part of the map.'
+    Top = 532
+    Width = 135
+    Anchors = [akLeft, akRight, akBottom]
+    Caption = 'Zoom'
+    TabOrder = 38
+    Visible = False
+    OnClick = BtZoomClick
+  end
+  object EdGTM: TLabeledEdit
+    AnchorSideLeft.Control = ImageMol
+    AnchorSideTop.Control = BtGTM
+    AnchorSideRight.Control = ImageMol
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 23
+    Hint = 'The file name of the GTM model (*XML)'
+    Top = 50
+    Width = 422
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 15
+    EditLabel.Width = 422
+    EditLabel.Caption = 'GTM model file (.xml):'
+    EditLabel.ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 39
+    TextHint = 'Enter the file name of the model (xml)'
+  end
+  object BtGTM: TButton
+    AnchorSideLeft.Control = ImageMol
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = BtOK
+    AnchorSideRight.Side = asrBottom
+    Left = 442
+    Height = 25
+    Top = 50
+    Width = 75
+    BorderSpacing.Left = 10
+    BorderSpacing.Top = 50
+    Caption = '...'
+    ParentFont = False
+    TabOrder = 40
+    OnClick = BtGTMClick
+  end
+  object EdSVM: TLabeledEdit
+    AnchorSideLeft.Control = EdLandscapeFile
+    AnchorSideTop.Control = BtSVM
+    AnchorSideRight.Control = EdLandscapeFile
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 23
+    Hint = 'The molecular descriptors file name (*.svm)'
+    Top = 200
+    Width = 422
+    Anchors = [akTop, akLeft, akRight]
+    EditLabel.Height = 15
+    EditLabel.Width = 422
+    EditLabel.Caption = 'Molecular descriptors file (.svm):'
+    EditLabel.ParentColor = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 41
+    TextHint = 'Enter the file name of the descriptors file (.svm)'
+  end
+  object BtSVM: TButton
+    AnchorSideLeft.Control = BtLandscapeFile
+    AnchorSideTop.Control = BtLandscapeFile
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = BtLandscapeFile
+    AnchorSideRight.Side = asrBottom
+    Left = 442
+    Height = 25
+    Top = 200
+    Width = 75
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 50
+    Caption = '...'
+    ParentFont = False
+    TabOrder = 42
+    OnClick = BtSVMClick
+  end
+  object LCSSamples: TListChartSource
+    YCount = 2
+    Left = 1121
+    Top = 465
+  end
+  object ODlgLandscapeFile: TOpenDialog
+    Title = 'Select a landscape file (.xml)'
+    Filter = 'XML|*.xml;*.XML|All|*'
+    Left = 400
+    Top = 112
+  end
+  object ODlgProjections: TOpenDialog
+    Title = 'Select a projection file (Prj.mat)'
+    Filter = 'MAT|*.mat;*.MAT|All|*'
+    Left = 400
+    Top = 336
+  end
+  object CTSMols: TChartToolset
+    Left = 1048
+    Top = 376
+    object CTSMolsDataPointClickTool: TDataPointClickTool
+      Shift = [ssLeft]
+      AffectedSeries = '0'
+      ActiveCursor = crCross
+      OnPointClick = CTSMolsDataPointClickToolPointClick
+    end
+    object CTSMolsDataPointCrosshairTool: TDataPointCrosshairTool
+      AffectedSeries = '0'
+      MouseInsideOnly = True
+    end
+    object CTSMolsUserDefinedTool1: TUserDefinedTool
+      Shift = [ssAlt, ssLeft]
+      OnAfterMouseDown = CTSMolsUserDefinedTool1AfterMouseDown
+      OnAfterMouseMove = CTSMolsUserDefinedTool1AfterMouseMove
+      OnAfterMouseUp = CTSMolsUserDefinedTool1AfterMouseUp
+    end
+    object CTSMolsZoomDragTool1: TZoomDragTool
+      Shift = [ssRight]
+      Brush.Style = bsClear
+      EscapeCancels = True
+    end
+  end
+  object LCSMols: TListChartSource
+    Left = 1121
+    Top = 376
+  end
+  object LCSEmphasize: TListChartSource
+    Left = 1232
+    Top = 376
+  end
+  object LCSLevels: TListChartSource
+    Left = 1121
+    Top = 554
+  end
+  object ODSDF: TOpenDialog
+    Title = 'Select an SDF file (*.SDF)'
+    Filter = 'SDF|*.sdf;*.SDF|All|*.*'
+    Left = 400
+    Top = 432
+  end
+  object SDSavePlot: TSaveDialog
+    Filter = 'PNG|*.png;*.PNG|All|*'
+    Left = 456
+    Top = 676
+  end
+  object LCSViridis: TListChartSource
+    DataPoints.Strings = (
+      '0|0|$FFFFFF|'
+      '0|0|$55004B|'
+      '0.05555556|0|$631649|'
+      '0.11111111|0|$702C42|'
+      '0.16666667|0|$7C3E35|'
+      '0.22222222|0|$865018|'
+      '0.27777778|0|$8F6000|'
+      '0.33333333|0|$947000|'
+      '0.38888889|0|$977F00|'
+      '0.44444444|0|$988E00|'
+      '0.5|0|$959B00|'
+      '0.55555556|0|$90A800|'
+      '0.61111111|0|$88B400|'
+      '0.66666667|0|$7DBE00|'
+      '0.72222222|0|$6FC833|'
+      '0.77777778|0|$5ED06C|'
+      '0.83333333|0|$4BD896|'
+      '0.88888889|0|$38DDBB|'
+      '0.94444444|0|$2CE1DE|'
+      '1|0|$33E3FD|'
+      '0|0|$FFFFFF|'
+    )
+    Left = 1121
+    Top = 635
+  end
+  object LCSPlasma: TListChartSource
+    DataPoints.Strings = (
+      '0|0|$FFFFFF|'
+      '0|0|$891800|'
+      '0.05555556|0|$890A34|'
+      '0.11111111|0|$8B0058|'
+      '0.16666667|0|$8D0072|'
+      '0.22222222|0|$8D0087|'
+      '0.27777778|0|$8C009A|'
+      '0.33333333|0|$8814AB|'
+      '0.38888889|0|$8329B9|'
+      '0.44444444|0|$7B3BC7|'
+      '0.5|0|$714ED2|'
+      '0.55555556|0|$6360DB|'
+      '0.61111111|0|$5272E3|'
+      '0.66666667|0|$3A85E8|'
+      '0.72222222|0|$0F98EC|'
+      '0.77777778|0|$00ACED|'
+      '0.83333333|0|$00C0EC|'
+      '0.88888889|0|$00D4E8|'
+      '0.94444444|0|$00E9E1|'
+      '1|0|$47FFDA|'
+      '0|0|$FFFFFF|'
+    )
+    Left = 1185
+    Top = 635
+  end
+  object LCSInferno: TListChartSource
+    DataPoints.Strings = (
+      '0|0|$FFFFFF|'
+      '0|0|$040404|'
+      '0.05555556|0|$2B0F13|'
+      '0.11111111|0|$3E1227|'
+      '0.16666667|0|$4F133E|'
+      '0.22222222|0|$5D1255|'
+      '0.27777778|0|$68106D|'
+      '0.33333333|0|$701185|'
+      '0.38888889|0|$74179B|'
+      '0.44444444|0|$7522B1|'
+      '0.5|0|$7032C5|'
+      '0.55555556|0|$6643D7|'
+      '0.61111111|0|$5357E7|'
+      '0.66666667|0|$356EF3|'
+      '0.72222222|0|$2488F5|'
+      '0.77777778|0|$26A0F7|'
+      '0.83333333|0|$3CB8F8|'
+      '0.88888889|0|$5ACEF9|'
+      '0.94444444|0|$7BE5FA|'
+      '1|0|$9EFEFF|'
+      '0|0|$FFFFFF|'
+    )
+    Left = 1048
+    Top = 635
+  end
+  object ODlgResp: TOpenDialog
+    Title = 'Select a projection file (Prj.mat)'
+    Filter = 'R.SVM|*R.svm;*R.SVM|All|*'
+    Left = 400
+    Top = 264
+  end
+  object ChToolCumRsp: TChartToolset
+    Left = 1112
+    Top = 32
+    object ChToolCumRspDataPointHintTool1: TDataPointHintTool
+      Shift = [ssRight]
+      DistanceMode = cdmOnlyX
+      OnHint = ChToolCumRspDataPointHintTool1Hint
+      UseDefaultHintText = False
+    end
+  end
+  object LSRcum: TListChartSource
+    Left = 849
+    Top = 53
+  end
+  object LSRorg: TListChartSource
+    Left = 912
+    Top = 53
+  end
+  object ODlgGTMFile: TOpenDialog
+    Title = 'Select a GTM model file (.xml)'
+    Filter = 'XML|*.xml;*.XML|All|*'
+    Left = 400
+    Top = 42
+  end
+  object ODlgSVM: TOpenDialog
+    Title = 'Select a molecular descriptors file (SVM)'
+    Filter = 'SVM|*.svm;*.SVM|All|*'
+    Left = 400
+    Top = 200
+  end
+end

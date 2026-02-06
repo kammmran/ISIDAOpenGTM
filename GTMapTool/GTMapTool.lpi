@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <Title Value="GTMapTool"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <BuildModes Count="1" Active="Default">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <CommandLineParams Value="-x tmp.xml -o tmpGTM -j -y tmp_NotSorted.svm --3D"/>
+        <WorkingDirectory Value="/home/marcou/workdir/ISIDAGTM2022/GTMNodeSelect/example"/>
+      </local>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default">
+          <local>
+            <CommandLineParams Value="-x tmp.xml -o tmpGTM -j -y tmp_NotSorted.svm --3D"/>
+            <WorkingDirectory Value="/home/marcou/workdir/ISIDAGTM2022/GTMNodeSelect/example"/>
+          </local>
+        </Mode0>
+      </Modes>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="39">
+      <Unit0>
+        <Filename Value="GTMapTool.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="275"/>
+        <CursorPos X="7" Y="339"/>
+        <UsageCount Value="295"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unitproc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitProc"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="275"/>
+        <CursorPos X="22" Y="280"/>
+        <ExtraEditorCount Value="1"/>
+        <ExtraEditor1>
+          <EditorIndex Value="-1"/>
+          <CursorPos Y="9"/>
+        </ExtraEditor1>
+        <UsageCount Value="295"/>
+        <Bookmarks Count="1">
+          <Item0 Y="303" ID="2"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="ugausjor.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="3" Y="44"/>
+        <UsageCount Value="112"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="uqr.pas"/>
+        <TopLine Value="98"/>
+        <CursorPos X="5" Y="134"/>
+        <UsageCount Value="81"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="ulinalg.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1529"/>
+        <CursorPos X="3" Y="1541"/>
+        <UsageCount Value="71"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="umatrix_inv.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="89"/>
+        <CursorPos X="6" Y="95"/>
+        <UsageCount Value="68"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="ugtm_em.pas"/>
+        <UnitName Value="ugtm_EM"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="41" Y="221"/>
+        <UsageCount Value="47"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="uclock.pas"/>
+        <TopLine Value="23"/>
+        <CursorPos X="49" Y="40"/>
+        <UsageCount Value="41"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="udatafile.pas"/>
+        <TopLine Value="71"/>
+        <CursorPos X="11" Y="88"/>
+        <UsageCount Value="33"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="usolid_angle.pas"/>
+        <CursorPos X="96" Y="180"/>
+        <UsageCount Value="31"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="ueigen_ops.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="49" Y="480"/>
+        <UsageCount Value="31"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="ugtm_options.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="109" Y="71"/>
+        <UsageCount Value="214"/>
+        <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="defines.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="7"/>
+        <UsageCount Value="46"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="cpucount.pas"/>
+        <TopLine Value="48"/>
+        <CursorPos X="5" Y="53"/>
+        <UsageCount Value="42"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="mythreads.pas"/>
+        <CursorPos X="5" Y="15"/>
+        <UsageCount Value="42"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="ugtmbase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMBase"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="352"/>
+        <CursorPos X="34" Y="383"/>
+        <UsageCount Value="286"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="../../../ISIDAKernel/iosvm.pas"/>
+        <UnitName Value="ioSVM"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="43"/>
+        <UsageCount Value="12"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="../../../ISIDAKernel/isida_descriptor.pas"/>
+        <UnitName Value="ISIDA_descriptor"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="623"/>
+        <CursorPos Y="652"/>
+        <UsageCount Value="12"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../../../ISIDAKernel/dmath/units/utypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="191"/>
+        <CursorPos X="11" Y="205"/>
+        <UsageCount Value="12"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="ulinalgsparse.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ULinAlgSparse"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="24" Y="36"/>
+        <UsageCount Value="280"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="ugtmfull.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMFull"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="654"/>
+        <CursorPos X="3" Y="660"/>
+        <UsageCount Value="280"/>
+        <Loaded Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="ucgtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UcGTM"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="72"/>
+        <CursorPos Y="89"/>
+        <UsageCount Value="278"/>
+        <Bookmarks Count="2">
+          <Item0 Y="311"/>
+          <Item1 Y="322" ID="1"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="ugtmxml.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMXML"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="225"/>
+        <CursorPos X="40" Y="247"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="uigtm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UiGTM"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="185"/>
+        <CursorPos X="8" Y="210"/>
+        <UsageCount Value="289"/>
+        <Loaded Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="../../ISIDAKernel/iosvm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ioSVM"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="33" Y="90"/>
+        <UsageCount Value="214"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../../isidakernel/isida_descriptor.pas"/>
+        <UnitName Value="ISIDA_descriptor"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23" Y="13"/>
+        <UsageCount Value="209"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="../../isidakernel/dmath/units/ulinalg.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="180"/>
+        <CursorPos X="14" Y="222"/>
+        <UsageCount Value="209"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="../../isidakernel/dmath/units/utypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="6" Y="11"/>
+        <UsageCount Value="209"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="ugtmmn.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMMN"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="168"/>
+        <CursorPos X="17" Y="181"/>
+        <UsageCount Value="214"/>
+        <Loaded Value="True"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="ugtmsparse.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UGTMSparse"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="166"/>
+        <CursorPos X="37" Y="181"/>
+        <UsageCount Value="214"/>
+        <Loaded Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="../../isidakernel/dmath/units/upca.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="439"/>
+        <CursorPos X="3" Y="459"/>
+        <UsageCount Value="132"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="../../ISIDAKernel/dmath/units/usvd.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="191"/>
+        <CursorPos X="5" Y="121"/>
+        <UsageCount Value="39"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="todelete/ugtm_manifold.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1468"/>
+        <CursorPos X="3" Y="1632"/>
+        <UsageCount Value="73"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="todelete/ueigen_ops.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="467"/>
+        <CursorPos X="3" Y="439"/>
+        <UsageCount Value="73"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="/usr/local/share/fpcsrc/rtl/objpas/math.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="55"/>
+        <CursorPos X="31" Y="88"/>
+        <UsageCount Value="5"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="unitlicence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitLicence"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="25"/>
+        <CursorPos Y="38"/>
+        <UsageCount Value="213"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="/lazarus/fpc/3.0.4/source/rtl/inc/objpash.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="174"/>
+        <CursorPos X="23" Y="194"/>
+        <UsageCount Value="4"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="/usr/share/fpcsrc/3.0.4/rtl/objpas/sysutils/finah.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17" Y="22"/>
+        <UsageCount Value="6"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="/usr/share/fpcsrc/3.0.4/rtl/objpas/sysutils/fina.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="16"/>
+        <CursorPos X="3" Y="24"/>
+        <UsageCount Value="6"/>
+      </Unit38>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="286" Column="11" TopLine="258"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="297" Column="39" TopLine="269"/>
+      </Position2>
+      <Position3>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="300" Column="11" TopLine="272"/>
+      </Position3>
+      <Position4>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="346" Column="17" TopLine="318"/>
+      </Position4>
+      <Position5>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="356" Column="11" TopLine="328"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="361" Column="11" TopLine="333"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="412" Column="7" TopLine="384"/>
+      </Position7>
+      <Position8>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="424" Column="11" TopLine="396"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="22" Column="24" TopLine="5"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="28" Column="58" TopLine="5"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="44" Column="36" TopLine="17"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="282" Column="9" TopLine="254"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="283" Column="39" TopLine="255"/>
+      </Position13>
+      <Position14>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="286" Column="11" TopLine="258"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="296" Column="9" TopLine="268"/>
+      </Position15>
+      <Position16>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="297" Column="39" TopLine="269"/>
+      </Position16>
+      <Position17>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="300" Column="11" TopLine="272"/>
+      </Position17>
+      <Position18>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="346" Column="17" TopLine="318"/>
+      </Position18>
+      <Position19>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="353" Column="9" TopLine="325"/>
+      </Position19>
+      <Position20>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="356" Column="11" TopLine="328"/>
+      </Position20>
+      <Position21>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="361" Column="11" TopLine="333"/>
+      </Position21>
+      <Position22>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="412" Column="7" TopLine="384"/>
+      </Position22>
+      <Position23>
+        <Filename Value="ugtmbase.pas"/>
+        <Caret Line="424" Column="33" TopLine="396"/>
+      </Position23>
+      <Position24>
+        <Filename Value="unitproc.pas"/>
+        <Caret Line="280" TopLine="256"/>
+      </Position24>
+      <Position25>
+        <Filename Value="unitproc.pas"/>
+        <Caret Line="50" Column="11" TopLine="35"/>
+      </Position25>
+      <Position26>
+        <Filename Value="unitproc.pas"/>
+        <Caret Line="202" Column="11" TopLine="214"/>
+      </Position26>
+      <Position27>
+        <Filename Value="unitproc.pas"/>
+        <Caret Line="50" Column="11" TopLine="35"/>
+      </Position27>
+      <Position28>
+        <Filename Value="unitproc.pas"/>
+        <Caret Line="479" Column="13" TopLine="458"/>
+      </Position28>
+      <Position29>
+        <Filename Value="ugtmfull.pas"/>
+        <Caret Line="24" Column="7" TopLine="3"/>
+      </Position29>
+      <Position30>
+        <Filename Value="ugtmfull.pas"/>
+        <Caret Line="66" Column="15" TopLine="52"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="GTMapTool"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="../../ISIDAKernel/dmath/units;../../ISIDAKernel"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <SmartLinkUnit Value="True"/>
+      <Optimizations>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
+      <LinkSmart Value="True"/>
+    </Linking>
+    <Other>
+      <CustomOptions Value="-dLOCALES"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <BreakPoints Count="6">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="ugtmxml.pas"/>
+        <Line Value="659"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="ucgtm.pas"/>
+        <Line Value="95"/>
+      </Item2>
+      <Item3>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="unitproc.pas"/>
+        <Line Value="280"/>
+      </Item3>
+      <Item4>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="ucgtm.pas"/>
+        <Line Value="84"/>
+      </Item4>
+      <Item5>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="ucgtm.pas"/>
+        <Line Value="93"/>
+      </Item5>
+      <Item6>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="ucgtm.pas"/>
+        <Line Value="92"/>
+      </Item6>
+    </BreakPoints>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

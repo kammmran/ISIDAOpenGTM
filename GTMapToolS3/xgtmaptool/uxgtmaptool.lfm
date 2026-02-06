@@ -1,0 +1,357 @@
+object FGTMapTool: TFGTMapTool
+  Left = 761
+  Height = 562
+  Top = 107
+  Width = 544
+  Caption = 'xGTMapTool'
+  ClientHeight = 562
+  ClientWidth = 544
+  LCLVersion = '1.6.4.0'
+  object BtOK: TButton
+    AnchorSideRight.Control = BtQuit
+    Left = 371
+    Height = 25
+    Top = 516
+    Width = 75
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 2
+    BorderSpacing.InnerBorder = 1
+    Caption = 'OK'
+    OnClick = BtOKClick
+    TabOrder = 0
+  end
+  object BtQuit: TButton
+    AnchorSideRight.Side = asrCenter
+    Left = 448
+    Height = 25
+    Top = 516
+    Width = 75
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 2
+    BorderSpacing.InnerBorder = 1
+    Caption = 'Quit'
+    OnClick = BtQuitClick
+    TabOrder = 1
+  end
+  object BtSVMfile: TButton
+    AnchorSideLeft.Control = EdSVMfile
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = EdSVMfile
+    AnchorSideTop.Side = asrCenter
+    Left = 451
+    Height = 25
+    Top = 24
+    Width = 75
+    BorderSpacing.Around = 5
+    BorderSpacing.InnerBorder = 1
+    Caption = '...'
+    OnClick = BtSVMfileClick
+    TabOrder = 2
+  end
+  object EdSVMfile: TEdit
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblInputSVM
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Side = asrBottom
+    Left = 201
+    Height = 25
+    Hint = 'Choose an input file in SVM format.'
+    Top = 24
+    Width = 245
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 5
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    TextHint = 'Input file (SVM Format)'
+  end
+  object LblInputSVM: TLabel
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Side = asrBottom
+    Left = 163
+    Height = 25
+    Top = 24
+    Width = 33
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 5
+    Caption = 'Input'
+    ParentColor = False
+  end
+  object MLog: TMemo
+    Left = 9
+    Height = 209
+    Top = 298
+    Width = 520
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Around = 2
+    Lines.Strings = (
+      '*********************************************'
+      'Welcome ISIDA/xGTMapTool'
+      ''
+      'a graphical front end to GTM.'
+      ''
+      'H. Gaspar, A. Varnek, D. Horvath,'
+      'P.Sidorov, A. Lin, G. Marcou'
+      ''
+      'Université de Strasbourg'
+      'Faculté de Chimie'
+      ''
+      '2017'
+      '*********************************************'
+      ''
+      ''
+      ''
+      ''
+      ''
+      ''
+    )
+    ScrollBars = ssAutoBoth
+    TabOrder = 4
+  end
+  object Lblk: TLabel
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Edk
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edk
+    Left = 18
+    Height = 25
+    Top = 96
+    Width = 172
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    Caption = 'Root of number of samples'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Lblm: TLabel
+    AnchorSideTop.Control = Edm
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edm
+    Left = 37
+    Height = 25
+    Top = 131
+    Width = 153
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    Caption = 'Root of number of traits'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Lblw: TLabel
+    AnchorSideTop.Control = Edw
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edw
+    Left = 128
+    Height = 25
+    Top = 166
+    Width = 62
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    Caption = 'RBF width'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Lbll: TLabel
+    AnchorSideTop.Control = Edl
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edl
+    Left = 99
+    Height = 25
+    Top = 201
+    Width = 91
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    Caption = 'Regularization'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Edk: TEdit
+    Left = 200
+    Height = 25
+    Hint = 'Square root of the number of samples on the manifold.'
+    Top = 96
+    Width = 80
+    AutoSize = False
+    BorderSpacing.Around = 10
+    NumbersOnly = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 5
+    Text = '25'
+  end
+  object Edm: TEdit
+    AnchorSideTop.Control = Edk
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Edk
+    AnchorSideRight.Side = asrCenter
+    Left = 200
+    Height = 25
+    Hint = 'Square root of the number of RBF attached to the manifold.'
+    Top = 131
+    Width = 80
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+    Text = '5'
+  end
+  object Edw: TEdit
+    AnchorSideTop.Control = Edm
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Edm
+    AnchorSideRight.Side = asrCenter
+    Left = 200
+    Height = 25
+    Hint = 'Width of the RBF attached to the manifold.  The default value (-1) sets the width to enclose O(100) sample points around any RBF.'
+    Top = 166
+    Width = 80
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 7
+    Text = '-1'
+  end
+  object Edl: TEdit
+    AnchorSideTop.Control = Edw
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Edw
+    AnchorSideRight.Side = asrCenter
+    Left = 200
+    Height = 25
+    Hint = 'Regularization coefficient. The default value (-1) sets the regularization so the prior on the weights of the GTM following a standard normal distribution.'
+    Top = 201
+    Width = 80
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+    Text = '-1'
+  end
+  object LblOut: TLabel
+    AnchorSideTop.Control = LblInputSVM
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = EdOut
+    Left = 152
+    Height = 25
+    Top = 54
+    Width = 44
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 5
+    Caption = 'Output'
+    ParentColor = False
+  end
+  object EdOut: TEdit
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LblOut
+    AnchorSideTop.Side = asrCenter
+    Left = 201
+    Height = 25
+    Hint = 'The output file names will start with the value of this parameter. This also set the location of the output files. By defaut, it is set to the input file name without extension.'
+    Top = 54
+    Width = 245
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 5
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+    TextHint = 'Output base name'
+  end
+  object BtOut: TButton
+    AnchorSideLeft.Control = BtSVMfile
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = EdOut
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = BtSVMfile
+    AnchorSideRight.Side = asrCenter
+    Left = 451
+    Height = 25
+    Top = 54
+    Width = 75
+    BorderSpacing.Around = 5
+    Caption = '...'
+    OnClick = BtOutClick
+    TabOrder = 10
+  end
+  object Edn: TEdit
+    AnchorSideTop.Control = Edl
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Edl
+    AnchorSideRight.Side = asrCenter
+    Left = 200
+    Height = 25
+    Hint = 'Regularization coefficient. The default value (-1) sets the regularization so the prior on the weights of the GTM following a standard normal distribution.'
+    Top = 236
+    Width = 80
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 11
+    Text = '100'
+  end
+  object Lbln: TLabel
+    AnchorSideTop.Control = Edn
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Edn
+    Left = 18
+    Height = 25
+    Top = 236
+    Width = 172
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    AutoSize = False
+    BorderSpacing.Around = 10
+    Caption = 'Max. number of iterations'
+    ParentColor = False
+    WordWrap = True
+  end
+  object CBPreprocess: TComboBox
+    AnchorSideLeft.Control = Edk
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Lblk
+    Left = 290
+    Height = 21
+    Top = 96
+    Width = 238
+    ItemHeight = 0
+    Items.Strings = (
+      'No pre-processing'
+      'Standardize'
+      'Center'
+      'Normalize within [-1,1]'
+      'Normalize within [-1,1] then center'
+    )
+    TabOrder = 12
+    Text = 'Select a pre-processing...'
+  end
+  object ODlgSVMfile: TOpenDialog
+    Height = 25
+    Title = 'Ouvrir un fichier SVM existant'
+    Filter = 'SVM|*.svm;*.SVM|All|*'
+    left = 416
+    top = 32
+  end
+  object ODlgOut: TSelectDirectoryDialog
+    left = 416
+    top = 80
+  end
+end

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="11">
+      <Unit0>
+        <Filename Value="xGTMReSample.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="84" Y="25"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit_xgtmresample.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmGTMReSample"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="86"/>
+        <CursorPos X="119" Y="99"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UnitGTMReSampleProc"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="35"/>
+        <CursorPos X="11" Y="52"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../GTMapTool/ugtmbase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../ISIDAKernel/dmath/units/utypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../ISIDAKernel/isida_descriptor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="GTMReSample.lpr"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="25" Y="40"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="unit_gtmresample_option.pas"/>
+        <UnitName Value="unit_GTMReSample_option"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="34" Y="3"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../GTMapTool/ugtm_options.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="466"/>
+        <CursorPos X="10" Y="290"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../ISIDAKernel/tpmat081/units/utypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../GTMapTool/unitlicence.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit10>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="74" TopLine="43"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="75" TopLine="43"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="77" TopLine="43"/>
+      </Position3>
+      <Position4>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="78" TopLine="43"/>
+      </Position4>
+      <Position5>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="84" TopLine="43"/>
+      </Position5>
+      <Position6>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="85" TopLine="43"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="108" TopLine="83"/>
+      </Position7>
+      <Position8>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="109" TopLine="83"/>
+      </Position8>
+      <Position9>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="124" TopLine="83"/>
+      </Position9>
+      <Position10>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="125" TopLine="83"/>
+      </Position10>
+      <Position11>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="126" TopLine="84"/>
+      </Position11>
+      <Position12>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="128" TopLine="86"/>
+      </Position12>
+      <Position13>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="24" Column="8" TopLine="4"/>
+      </Position13>
+      <Position14>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="9" Column="36"/>
+      </Position14>
+      <Position15>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="31" Column="5"/>
+      </Position15>
+      <Position16>
+        <Filename Value="unit_xgtmresample.pas"/>
+        <Caret Line="119" TopLine="75"/>
+      </Position16>
+      <Position17>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="136" TopLine="94"/>
+      </Position17>
+      <Position18>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="137" TopLine="95"/>
+      </Position18>
+      <Position19>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="138" TopLine="95"/>
+      </Position19>
+      <Position20>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="139" TopLine="95"/>
+      </Position20>
+      <Position21>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="140" TopLine="95"/>
+      </Position21>
+      <Position22>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="136" TopLine="95"/>
+      </Position22>
+      <Position23>
+        <Filename Value="unit_xgtmresample.pas"/>
+        <Caret Line="119" Column="24" TopLine="66"/>
+      </Position23>
+      <Position24>
+        <Filename Value="../GTMapTool/ugtm_options.pas"/>
+        <Caret Line="10" Column="15"/>
+      </Position24>
+      <Position25>
+        <Filename Value="../GTMapTool/ugtm_options.pas"/>
+        <Caret Line="12" Column="30"/>
+      </Position25>
+      <Position26>
+        <Filename Value="../GTMapTool/ugtm_options.pas"/>
+        <Caret Line="4" Column="57"/>
+      </Position26>
+      <Position27>
+        <Filename Value="../GTMapTool/ugtm_options.pas"/>
+        <Caret Line="7" Column="53"/>
+      </Position27>
+      <Position28>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="34" Column="58" TopLine="22"/>
+      </Position28>
+      <Position29>
+        <Filename Value="unitgtmresampleproc.pas"/>
+        <Caret Line="46" Column="33" TopLine="32"/>
+      </Position29>
+      <Position30>
+        <Filename Value="xGTMReSample.lpr"/>
+        <Caret Line="25" Column="84"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
