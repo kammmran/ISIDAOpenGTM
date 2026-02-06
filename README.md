@@ -27,16 +27,14 @@ The ISIDA/GTM package is designed to:
 
 ## Installation and Access
 
-For compilation, the ISIDA/Kernel project is required:
-```
-https://github.com/Laboratoire-de-Chemoinformatique/ISIDAKernel
+For compilation, the [ISIDA/Kernel](https://github.com/Laboratoire-de-Chemoinformatique/ISIDAKernel) project is required.
 
-```
+
 
 ---
 
 ## Documentation
 
-For detailed usage instructions, command-line options, and examples, please refer to the [ISIDA/GTM Manual]().
+For detailed usage instructions, command-line options, and examples, please refer to the [ISIDA/GTM Manual](https://github.com/Laboratoire-de-Chemoinformatique/ISIDAOpenGTM_Legacy/blob/main/doc/doc_ISIDAOpenGTM_Legacy.pdf).
 
 ---
