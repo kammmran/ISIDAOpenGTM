@@ -53,6 +53,8 @@ The project builds on macOS (Apple Silicon and Intel) with Free Pascal 3.2.x and
 
 The programs look for the licence file at `~/.config/ISIDAGTM/licence.dat`.
 
+**Full macOS guide (licence installation, running every program, troubleshooting): [macos/SETUP.md](macos/SETUP.md).**
+
 Why the GUI needs `lld`: Apple's current linker rejects the Objective-C method lists that Free Pascal 3.2.x generates for the Cocoa widgetset (`ld: malformed method list atom ...`), and its `-ld_classic` fallback has been removed. `macos/linker/ld` is a small shim that links with LLVM's `ld64.lld` instead; `macos/build.sh` passes it to the compiler with `-FD`.
 
 Built by `macos/build.sh`: GTMapTool, GTMClass, GTMReg, GTMReSample, GTMNodeSelect, SGTM (command line) and xGTMapTool, xGTMClass, xGTMReg, xGTMReSample, xGTMNodeSelect, GTMmanifold (GUI).

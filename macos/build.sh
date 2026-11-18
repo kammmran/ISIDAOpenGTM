@@ -181,4 +181,5 @@ say "Built:${OK:- nothing}"
 say "Output: $DIST"
 say ""
 say "The programs check for a licence file at ~/.config/ISIDAGTM/licence.dat."
+say "How to install the licence and run the programs: macos/SETUP.md"
 [ -z "$FAILED" ]
