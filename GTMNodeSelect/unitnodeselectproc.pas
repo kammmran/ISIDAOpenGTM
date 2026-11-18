@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils,
   Contnrs,math,streamex,utypes,ulinalg,UGTMBase,UGTMFull,UGTMSparse, UcGTM,
-  UGTMXML,XMLRead, XMLWrite, DOM, UnitLLStringList, Forms;
+  UGTMXML,XMLRead, XMLWrite, DOM, UnitLLStringList{$IFDEF LCL}, Forms{$ENDIF};
 
 procedure LoadSDF(const sSDF: string; OLSDF: TObjectList);
 procedure WriteSDF(const sSDF: string; const OLSDF: TObjectList);
@@ -454,7 +454,7 @@ begin
       sline:=sline+' DW='+FloatToStrF(DW,ffFixed,8,5)+' %DW='+FloatToStrF(dConv*100,ffFixed,8,5);
       If dLL<ConvCriteria then bConv:=True;
     end;
-    SLlog.Add(sline);  Application.ProcessMessages;//APP_PROCESS;
+    SLlog.Add(sline);  {$IFDEF LCL}Application.ProcessMessages;{$ENDIF}
     //Prepare next iteration
     LLt0:=LLt;
   end;

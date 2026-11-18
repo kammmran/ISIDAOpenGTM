@@ -208,12 +208,12 @@ begin
   DimMatrix(fPGPL,M,M);
   //DimMatrix(fPr,N,K);
   DimVector(fLLM,N);}
-  //Below, these line are dangerous: W is not set if the calculation restarts...
-  If (not Restart) then
-  begin
-    UpdateMatY();
-    CompDist2;
-  end;
+  //W is either initialized above or loaded from a model file (Restart).
+  //In both cases Y and the distances must be computed, otherwise the first
+  //Expectation step sees all distances as zero, the responsibilities become
+  //uniform and continued training collapses the manifold.
+  UpdateMatY();
+  CompDist2;
 end;
 
 procedure TcGTM.Init1(kSamples, mTraits: integer; asigma: double; aalpha: double;

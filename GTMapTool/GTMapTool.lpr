@@ -157,12 +157,12 @@ type
       sz := GetOptionValue('z','limit');
       GTMOptions.convCriteria := StrToFloat(sz);
     end;
-    if HasOption('j') then
+    if HasOption('j','DoProj') then
     begin
       GTMOptions.doProjection:=True;
-      if HasOption('y') then
+      if HasOption('y','NewData') then
       begin
-        sy := GetOptionValue('y');
+        sy := GetOptionValue('y','NewData');
         Val(sy,iy,cde);
         if cde<> 0 then
           GTMOptions.projFile := sy
@@ -191,6 +191,50 @@ type
     end;
     if HasOption('PC123') then
       GTMOptions.PCAFile:=GetOptionValue('PC123');
+    //Validate the combination of input options before doing any work.
+    //Without these checks an empty run dereferences unallocated matrices.
+    if (GTMOptions.inputFile='') and (GTMOptions.modelFile='') then
+    begin
+      Writeln('ERROR: nothing to do. Give a training file (-i) or a model file (-x).');
+      Writeln('Use -h for help.');
+      FreeAndNil(GTMOptions);
+      ExitCode:=1;
+      Terminate;
+      Exit;
+    end;
+    if (GTMOptions.inputFile='') and (GTMOptions.projFile='') then
+    begin
+      Writeln('ERROR: a model file (-x) was given without data. Use -j -y <file.svm> to project data,');
+      Writeln('or -i <file.svm> to continue training the model.');
+      FreeAndNil(GTMOptions);
+      ExitCode:=1;
+      Terminate;
+      Exit;
+    end;
+    if (GTMOptions.inputFile<>'') and (not FileExists(GTMOptions.inputFile)) then
+    begin
+      Writeln('ERROR: input file not found: '+GTMOptions.inputFile);
+      FreeAndNil(GTMOptions);
+      ExitCode:=1;
+      Terminate;
+      Exit;
+    end;
+    if (GTMOptions.modelFile<>'') and (not FileExists(GTMOptions.modelFile)) then
+    begin
+      Writeln('ERROR: model file not found: '+GTMOptions.modelFile);
+      FreeAndNil(GTMOptions);
+      ExitCode:=1;
+      Terminate;
+      Exit;
+    end;
+    if (GTMOptions.projFile<>'') and (not FileExists(GTMOptions.projFile)) then
+    begin
+      Writeln('ERROR: file to project not found: '+GTMOptions.projFile);
+      FreeAndNil(GTMOptions);
+      ExitCode:=1;
+      Terminate;
+      Exit;
+    end;
     //
     if GTMOptions.modelFile<>'' then
     begin
@@ -935,7 +979,10 @@ type
     Writeln('$ GTMapTool -i train.svm -o output -k 15 -m 5 -j --3D');
     Writeln;
     Writeln('- Projection of test data on existing model: ');
-    Writeln('$ GTMapTool -i mySvm.svm -x myGTM.xml -o output -j -y test.svm');
+    Writeln('$ GTMapTool -x myGTM.xml -o output -j -y test.svm');
+    Writeln;
+    Writeln('- Continue training an existing model, then project the training data: ');
+    Writeln('$ GTMapTool -i train.svm -x myGTM.xml -o output -j');
     Writeln;
   end;
 

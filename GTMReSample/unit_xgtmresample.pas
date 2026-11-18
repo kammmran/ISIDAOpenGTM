@@ -5,7 +5,7 @@ unit unit_xgtmresample;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Spin, UnitGTMReSampleProc, unit_GTMReSample_option, FileUtil;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Spin, UnitGTMReSampleProc, unit_GTMReSample_option, FileUtil, LazFileUtils;
 
 type
 

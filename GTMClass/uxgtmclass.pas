@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Spin,
-  UGTMClass, GTMClassFunctions, UnitClsStats, UnitCVsvm, FileUtil, strutils;
+  UGTMClass, GTMClassFunctions, UnitClsStats, UnitCVsvm, FileUtil, LazFileUtils, strutils;
 
 type
 
@@ -291,6 +291,7 @@ begin
     FreeAndNil(aGTMClass);
   end else if RBtPred.Checked=True then
   begin
+    aClsStat:=nil; //only created when a property file is given; freed below in all cases
     aGTMClass:= TGTMClass.Create;
     MmLog.Lines.Add('Begin to read specified landscape and projected responsibilities.');
     readLandscape(EdtModel.Text,aGTMClass);
@@ -314,7 +315,7 @@ begin
        sres:=sres+copy(SLtest[ii],ipos,Length(SLtest[ii]));
        SLtest[ii]:=sres;
      end;
-     UseLandscape(aGTMClass,1,SLtest,EdtOut.Text,aClsStat,MmLog.Lines);
+     UseLandscape(aGTMClass,SLtest,EdtOut.Text,aClsStat,MmLog.Lines);
      FreeAndNil(SLProp);
      FreeAndNil(SLtest);
      //
@@ -358,7 +359,7 @@ begin
         aGTMClass.bClassNormalize:=False;
       TrainLandscape(aGTMClass,SLtrain,EdtOut.Text+'_train-fold'+IntToStr(kfold),EdtAuthor.Text,EdtTitle.Text,EdtComment.Text,MmLog.Lines);
       aGTMClass.SetMolCountToZero;
-      UseLandscape(aGTMClass,1,SLtest,EdtOut.Text+'_test-fold'+IntToStr(kfold),aClsStat,MmLog.Lines);
+      UseLandscape(aGTMClass,SLtest,EdtOut.Text+'_test-fold'+IntToStr(kfold),aClsStat,MmLog.Lines);
       //Output results
       aStat[0]:=aClsStat.Accuracy();
       aStat[1]:=aClsStat.BalancedAccuracy();
