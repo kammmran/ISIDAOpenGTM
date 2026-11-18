@@ -1,0 +1,36 @@
+# Free Pascal / Lazarus build output
+lib/
+backup/
+*.o
+*.ppu
+*.or
+*.compiled
+link*.res
+symbol_order*.fpc
+ppas.sh.bak
+
+# Built programs and Lazarus-generated macOS bundles
+*.app/
+/GTMapTool/GTMapTool
+/GTMapTool/xgtmaptool/xGTMapTool
+/GTMapToolS3/GTMapTool
+/GTMapToolS3/xgtmaptool/xGTMapTool
+/GTMClass/GTMClass
+/GTMClass/xGTMClass
+/GTMReg/GTMReg
+/GTMReg/xGTMReg
+/GTMReSample/GTMReSample
+/GTMReSample/xGTMReSample
+/GTMNodeSelect/GTMNodeSelect
+/GTMNodeSelect/xGTMNodeSelect
+/GTMView/xGTMView
+/GTMLandscape/xGTMLandscape/xGTMLandscape
+/GTMmanifold/GTMmanifold
+/GTMGui/gtmgui
+/KGTM/KGTM
+/SGTM/SGTM
+
+# Output of macos/build.sh
+/dist/
+
+.DS_Store

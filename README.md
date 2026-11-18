@@ -29,6 +29,35 @@ The ISIDA/GTM package is designed to:
 
 For compilation, the [ISIDA/Kernel](https://github.com/Laboratoire-de-Chemoinformatique/ISIDAKernel) project is required.
 
+### Building on macOS
+
+The project builds on macOS (Apple Silicon and Intel) with Free Pascal 3.2.x and Lazarus (Cocoa widgetset).
+
+1. Install the tools:
+   ```sh
+   brew install fpc lld       # lld is needed to link the GUI programs, see below
+   ```
+   and Lazarus (official installer, or [fpcupdeluxe](https://github.com/LongDirtyAnimAlf/fpcupdeluxe)) so that `lazbuild` is available.
+2. Build everything:
+   ```sh
+   macos/build.sh --fetch-deps
+   ```
+   `--fetch-deps` clones the required sources next to this repository, where the project files expect them:
+   ```
+   <parent>/ISIDAOpenGTM
+   <parent>/ISIDAKernel
+   <parent>/ModelAnalyzerR   (ISIDAModelAnalyzerR)
+   <parent>/ModelAnalyzerC   (ISIDAModelAnalyzerC)
+   ```
+3. The results are in `dist/macos/`: the command-line tools in `dist/macos/bin/` and the graphical tools as `.app` bundles.
+
+The programs look for the licence file at `~/.config/ISIDAGTM/licence.dat`.
+
+Why the GUI needs `lld`: Apple's current linker rejects the Objective-C method lists that Free Pascal 3.2.x generates for the Cocoa widgetset (`ld: malformed method list atom ...`), and its `-ld_classic` fallback has been removed. `macos/linker/ld` is a small shim that links with LLVM's `ld64.lld` instead; `macos/build.sh` passes it to the compiler with `-FD`.
+
+Built by `macos/build.sh`: GTMapTool, GTMClass, GTMReg, GTMReSample, GTMNodeSelect, SGTM (command line) and xGTMapTool, xGTMClass, xGTMReg, xGTMReSample, xGTMNodeSelect (GUI).
+Not built: xGTMView and xGTMLandscape (need the non-public `Molecule` sources), KGTM (needs a newer ISIDAKernel than the public one), GTMmanifold (GLScene) and GTMGui (BGRABitmap / BGLControls).
+
 
 
 ---

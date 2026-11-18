@@ -16,9 +16,9 @@ uses
 begin
   {$IfDef WINDOWS}DefaultFormatSettings.DateSeparator:='-';{$EndIf}
   {$IfDef LOCALES}DefaultFormatSettings.DecimalSeparator:='.';DefaultFormatSettings.ShortDateFormat:='d/m/y';{$EndIf}
-  CheckLicence();
   RequireDerivedFormResource:=True;
   Application.Initialize;
+  CheckLicence(); //after Initialize: on macOS (Cocoa) a dialog shown earlier creates a plain NSApplication and the LCL main loop then crashes
   Application.CreateForm(TFormGTMView, FormGTMView);
   Application.Run;
 end.
