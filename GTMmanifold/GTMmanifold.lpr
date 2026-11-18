@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, uGTMmanifold, GLScene_RunTime, UnitLicence
+  Forms, uGTMmanifold, UnitLicence
   { you can add units after this },sysutils;
 
 {$R *.res}

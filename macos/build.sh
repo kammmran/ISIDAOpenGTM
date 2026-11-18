@@ -162,7 +162,7 @@ if [ $CLI_ONLY -eq 0 ]; then
   say ""
   say "Graphical tools:"
   for p in GTMapTool/xgtmaptool/xGTMapTool.lpi GTMClass/xGTMClass.lpi GTMReg/xGTMReg.lpi \
-           GTMReSample/xGTMReSample.lpi GTMNodeSelect/xGTMNodeSelect.lpi; do
+           GTMReSample/xGTMReSample.lpi GTMNodeSelect/xGTMNodeSelect.lpi GTMmanifold/GTMmanifold.lpi; do
     if build "$p" gui; then
       n=$(basename "$p" .lpi)
       make_app "$ROOT/$(dirname "$p")/$n" "$n"
@@ -174,7 +174,6 @@ say ""
 say "Not built (their dependencies are not publicly available or not packaged for Lazarus 4 / Cocoa):"
 say "  xGTMView, xGTMLandscape  need the private 'Molecule' sources"
 say "  KGTM                     needs a newer ISIDAKernel (TKPCAStream API) than the public one"
-say "  GTMmanifold              needs the GLScene packages"
 say "  GTMGui                   needs the BGRABitmap / BGLControls packages"
 say ""
 say "Built:${OK:- nothing}"

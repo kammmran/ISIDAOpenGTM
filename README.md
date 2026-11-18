@@ -55,8 +55,11 @@ The programs look for the licence file at `~/.config/ISIDAGTM/licence.dat`.
 
 Why the GUI needs `lld`: Apple's current linker rejects the Objective-C method lists that Free Pascal 3.2.x generates for the Cocoa widgetset (`ld: malformed method list atom ...`), and its `-ld_classic` fallback has been removed. `macos/linker/ld` is a small shim that links with LLVM's `ld64.lld` instead; `macos/build.sh` passes it to the compiler with `-FD`.
 
-Built by `macos/build.sh`: GTMapTool, GTMClass, GTMReg, GTMReSample, GTMNodeSelect, SGTM (command line) and xGTMapTool, xGTMClass, xGTMReg, xGTMReSample, xGTMNodeSelect (GUI).
-Not built: xGTMView and xGTMLandscape (need the non-public `Molecule` sources), KGTM (needs a newer ISIDAKernel than the public one), GTMmanifold (GLScene) and GTMGui (BGRABitmap / BGLControls).
+Built by `macos/build.sh`: GTMapTool, GTMClass, GTMReg, GTMReSample, GTMNodeSelect, SGTM (command line) and xGTMapTool, xGTMClass, xGTMReg, xGTMReSample, xGTMNodeSelect, GTMmanifold (GUI).
+Not built: xGTMView and xGTMLandscape (need the non-public `Molecule` sources), KGTM (needs a newer ISIDAKernel than the public one) and GTMGui (BGRABitmap / BGLControls).
+
+GTMmanifold no longer uses GLScene (not available for the Cocoa widgetset); its 3D view uses Lazarus' own `TOpenGLControl` (package LazOpenGLContext). It can also be started with the three files on the command line:
+`GTMmanifold <data Z3D.mat> <manifold WPhi3D.mat> <model.xml>` (files from `GTMapTool ... -j --3D`).
 
 
 
