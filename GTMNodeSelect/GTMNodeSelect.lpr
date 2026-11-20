@@ -639,6 +639,8 @@ end;
 var
   Application: TGTMNodeSelect;
 begin
+  {$IfDef WINDOWS}DefaultFormatSettings.DateSeparator:='-';{$EndIf}
+  {$IfDef LOCALES}DefaultFormatSettings.DecimalSeparator:='.';DefaultFormatSettings.ShortDateFormat:='d/m/y';{$EndIf}
   Application:=TGTMNodeSelect.Create(nil);
   Application.Title:='GTMNodeSelect';
   Application.Run;

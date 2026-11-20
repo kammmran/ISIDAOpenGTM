@@ -95,6 +95,9 @@
       <OtherUnitFiles Value="../GTMapTool;../../ISIDAKernel/dmath/units;../../ISIDAKernel"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
+    <Other>
+      <CustomOptions Value="-dLOCALES"/>
+    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">

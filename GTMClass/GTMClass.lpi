@@ -93,6 +93,9 @@
         <DebugInfoType Value="dsDwarf2Set"/>
       </Debugging>
     </Linking>
+    <Other>
+      <CustomOptions Value="-dLOCALES"/>
+    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions>
