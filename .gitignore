@@ -11,6 +11,7 @@ ppas.sh.bak
 
 # Built programs and Lazarus-generated macOS bundles
 *.app/
+*.exe
 /GTMapTool/GTMapTool
 /GTMapTool/xgtmaptool/xGTMapTool
 /GTMapToolS3/GTMapTool
@@ -30,7 +31,7 @@ ppas.sh.bak
 /KGTM/KGTM
 /SGTM/SGTM
 
-# Output of macos/build.sh
+# Output of macos/build.sh and windows/build.sh
 /dist/
 
 .DS_Store

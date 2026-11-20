@@ -29,6 +29,15 @@ The ISIDA/GTM package is designed to:
 
 For compilation, the [ISIDA/Kernel](https://github.com/Laboratoire-de-Chemoinformatique/ISIDAKernel) project is required.
 
+### Ready-to-use programs
+
+Programs for macOS (`.app` bundles and command-line tools) and Windows (64-bit `.exe`) are attached to the [releases](https://github.com/kammmran/ISIDAOpenGTM/releases):
+
+- `ISIDAGTM-macos-arm64.zip` for Macs with Apple Silicon. See [macos/SETUP.md](macos/SETUP.md), from section 4.
+- `ISIDAGTM-windows-x64.zip` for Windows. See [windows/SETUP.md](windows/SETUP.md).
+
+The programs need the licence file of the laboratory (`licence.dat`); both guides say where to put it.
+
 ### Building on macOS
 
 The project builds on macOS (Apple Silicon and Intel) with Free Pascal 3.2.x and Lazarus (Cocoa widgetset).
@@ -62,6 +71,18 @@ Not built: xGTMView and xGTMLandscape (need the non-public `Molecule` sources), 
 
 GTMmanifold no longer uses GLScene (not available for the Cocoa widgetset); its 3D view uses Lazarus' own `TOpenGLControl` (package LazOpenGLContext). It can also be started with the three files on the command line:
 `GTMmanifold <data Z3D.mat> <manifold WPhi3D.mat> <model.xml>` (files from `GTMapTool ... -j --3D`).
+
+### Building for Windows
+
+The Windows programs are cross-compiled on macOS or Linux, with the same Lazarus and Free Pascal:
+
+```sh
+windows/build.sh --fetch-deps
+```
+
+The results are in `dist/windows/`. The script compiles the Free Pascal units for Windows on its first run and needs no Windows tools. Details, and how to build on Windows itself: [windows/SETUP.md](windows/SETUP.md).
+
+`macos/build.sh --zip` and `windows/build.sh --zip` also pack the results into `dist/ISIDAGTM-macos-<arch>.zip` and `dist/ISIDAGTM-windows-x64.zip`.
 
 
 

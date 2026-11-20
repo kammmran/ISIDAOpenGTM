@@ -3,6 +3,18 @@
 This guide covers building ISIDA/GTM on a Mac, installing the licence file and
 running each program. It applies to Apple Silicon and Intel Macs.
 
+If you downloaded the ready-made programs (`ISIDAGTM-macos-arm64.zip` from the
+[releases page](https://github.com/kammmran/ISIDAOpenGTM/releases), for Apple
+Silicon), skip the build: extract the archive, remove the download quarantine
+of the extracted folder, and continue with section 4. Where this guide says
+`dist/macos`, use the extracted folder.
+
+```sh
+xattr -dr com.apple.quarantine ~/Downloads/ISIDAGTM-macos-arm64
+```
+
+The Windows programs have their own guide: [windows/SETUP.md](../windows/SETUP.md).
+
 - [1. Install the tools](#1-install-the-tools)
 - [2. Get the sources](#2-get-the-sources)
 - [3. Build](#3-build)
@@ -69,6 +81,7 @@ git checkout macos-fixes        # until it is merged into main
 macos/build.sh --fetch-deps     # first time: also clones the dependencies
 macos/build.sh                  # later builds
 macos/build.sh --cli-only       # only the command-line tools (lld not needed)
+macos/build.sh --zip            # also creates dist/ISIDAGTM-macos-<arch>.zip
 ```
 
 The results are collected in `dist/macos/`:

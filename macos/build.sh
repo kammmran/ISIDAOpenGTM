@@ -4,6 +4,7 @@
 #   macos/build.sh               build everything that can be built
 #   macos/build.sh --fetch-deps  also clone the missing dependency repositories
 #   macos/build.sh --cli-only    build only the command-line tools
+#   macos/build.sh --zip         also pack the result into dist/ISIDAGTM-macos-<arch>.zip
 #
 # Requirements:
 #   - Free Pascal 3.2.x and Lazarus (lazbuild) with the Cocoa widgetset
@@ -26,16 +27,19 @@ set -u
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 PARENT=$(dirname "$ROOT")
 DIST="$ROOT/dist/macos"
+ZIPFILE="$ROOT/dist/ISIDAGTM-macos-$(uname -m).zip"
 LINKER_DIR="$ROOT/macos/linker"
 GH=https://github.com/Laboratoire-de-Chemoinformatique
 
 FETCH=0
 CLI_ONLY=0
+ZIP=0
 for a in "$@"; do
   case "$a" in
     --fetch-deps) FETCH=1 ;;
     --cli-only) CLI_ONLY=1 ;;
-    -h|--help) sed -n '2,24p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+    --zip) ZIP=1 ;;
+    -h|--help) sed -n '2,25p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
     *) echo "unknown option: $a" >&2; exit 2 ;;
   esac
 done
@@ -124,6 +128,11 @@ make_app() { # <binary path> <name>
   mkdir -p "$app/Contents/MacOS" "$app/Contents/Resources"
   cp "$bin" "$app/Contents/MacOS/$name"
   printf 'APPL????' > "$app/Contents/PkgInfo"
+  # Use the project's Windows icon, when it has one, as the icon of the app.
+  icon=""
+  if sips -s format icns "$(dirname "$bin")/$name.ico" --out "$app/Contents/Resources/$name.icns" >/dev/null 2>&1; then
+    icon="<key>CFBundleIconFile</key><string>$name</string>"
+  fi
   # No NSPrincipalClass key: with it, AppKit creates a plain NSApplication
   # before the LCL can create its own subclass, and Application.Run then
   # aborts with "-[NSApplication lclSetLCLMainLoop:]: unrecognized selector".
@@ -134,6 +143,7 @@ make_app() { # <binary path> <name>
 <dict>
   <key>CFBundleDevelopmentRegion</key><string>English</string>
   <key>CFBundleExecutable</key><string>$name</string>
+  $icon
   <key>CFBundleName</key><string>$name</string>
   <key>CFBundleIdentifier</key><string>fr.unistra.isida.$(echo "$name" | tr 'A-Z' 'a-z')</string>
   <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
@@ -170,6 +180,15 @@ if [ $CLI_ONLY -eq 0 ]; then
   done
 fi
 
+if [ $ZIP -eq 1 ] && [ -z "$FAILED" ]; then
+  cp "$ROOT/macos/SETUP.md" "$DIST/README.md"
+  cp "$ROOT/LICENSE" "$DIST/LICENSE.txt"
+  rm -f "$ZIPFILE"
+  (cd "$DIST" && set -- bin README.md LICENSE.txt && { [ $CLI_ONLY -eq 1 ] || set -- "$@" *.app; } \
+    && zip -q -r -y -9 "$ZIPFILE" "$@") || die "could not create $ZIPFILE"
+  rm -f "$DIST/README.md" "$DIST/LICENSE.txt"
+fi
+
 say ""
 say "Not built (their dependencies are not publicly available or not packaged for Lazarus 4 / Cocoa):"
 say "  xGTMView, xGTMLandscape  need the private 'Molecule' sources"
@@ -179,6 +198,7 @@ say ""
 say "Built:${OK:- nothing}"
 [ -z "$FAILED" ] || say "Failed:$FAILED"
 say "Output: $DIST"
+[ $ZIP -eq 0 ] || [ -n "$FAILED" ] || say "Archive: $ZIPFILE"
 say ""
 say "The programs check for a licence file at ~/.config/ISIDAGTM/licence.dat."
 say "How to install the licence and run the programs: macos/SETUP.md"
